@@ -1,0 +1,110 @@
+table CropHealthScans
+	lineageTag: 86eb645d-672b-5662-8859-6c18b3fe1957
+
+	column ScanID
+		dataType: string
+		lineageTag: 0b4e2e96-85c2-4260-91a5-9e0ef78827a3
+		summarizeBy: none
+		sourceColumn: ScanID
+
+	column FarmID
+		dataType: string
+		lineageTag: 87cb43d1-4505-4d46-83b5-d687af70dc50
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column CropID
+		dataType: string
+		lineageTag: 5464a853-2504-4e4b-a1e8-bab512d7e4de
+		summarizeBy: none
+		sourceColumn: CropID
+
+	column ScanDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: caa02775-283c-4ba9-ae88-17f1e7f9f0ac
+		summarizeBy: none
+		sourceColumn: ScanDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column VisionModuleStatus
+		dataType: string
+		lineageTag: ab73a836-7dfc-4b49-a22a-642627ea9685
+		summarizeBy: none
+		sourceColumn: VisionModuleStatus
+
+	column CropHealthScore
+		dataType: double
+		formatString: 0.00
+		lineageTag: 3d13edd6-6778-4350-a3a1-af44b6d4e6be
+		summarizeBy: sum
+		sourceColumn: CropHealthScore
+
+	column DetectedDisease
+		dataType: string
+		lineageTag: 067243a4-a722-4cae-90f9-10ebb56eba45
+		summarizeBy: none
+		sourceColumn: DetectedDisease
+
+	column PestRiskLevel
+		dataType: string
+		lineageTag: cfdee5b0-8fb0-4528-85ac-7879cf50d4ba
+		summarizeBy: none
+		sourceColumn: PestRiskLevel
+
+	column PlantStressIndicator
+		dataType: string
+		lineageTag: c44fa70b-58b6-4b60-85f4-9c3f3ad80069
+		summarizeBy: none
+		sourceColumn: PlantStressIndicator
+
+	column ImageDiagnosisResult
+		dataType: string
+		lineageTag: d32ac3ea-1c65-40f0-9cd5-db715b8efba0
+		summarizeBy: none
+		sourceColumn: ImageDiagnosisResult
+
+	column RecommendedTreatment
+		dataType: string
+		lineageTag: 0ed723ec-b484-4ec5-8cd9-859100026a11
+		summarizeBy: none
+		sourceColumn: RecommendedTreatment
+
+	column PreventiveAction
+		dataType: string
+		lineageTag: cb08060a-36ce-462b-ae36-e0dd6a40355a
+		summarizeBy: none
+		sourceColumn: PreventiveAction
+
+	column Status
+		dataType: string
+		lineageTag: e61cc2ea-5f35-4a36-809c-b8329267e240
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 62df6a7a-fb71-4ede-b5ee-64ae6537a524
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: 296d1adc-8952-4158-8952-b6b28b85a1b6
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	partition CropHealthScans-289e1d7e-2032-5e55-ae4c-ead4a1e2c433 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\CropHealthScans.csv"), [Delimiter=",", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"ScanID", type text}, {"FarmID", type text}, {"CropID", type text}, {"ScanDate", type date}, {"VisionModuleStatus", type text}, {"CropHealthScore", type number}, {"DetectedDisease", type text}, {"PestRiskLevel", type text}, {"PlantStressIndicator", type text}, {"ImageDiagnosisResult", type text}, {"RecommendedTreatment", type text}, {"PreventiveAction", type text}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}}, "en-US")
+				in
+				    #"Changed Type"
+

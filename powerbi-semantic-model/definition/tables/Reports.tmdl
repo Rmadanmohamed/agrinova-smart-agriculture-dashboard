@@ -1,0 +1,85 @@
+table Reports
+	lineageTag: 43980bf1-b26c-50fe-8888-df0da6c9dbf6
+
+	column ReportID
+		dataType: string
+		lineageTag: a2c208bc-3939-4ec2-ae55-a931e8687411
+		summarizeBy: none
+		sourceColumn: ReportID
+
+	column ReportName
+		dataType: string
+		lineageTag: a2004298-c68a-45f8-b246-fc91fc45f9e5
+		summarizeBy: none
+		sourceColumn: ReportName
+
+	column ReportCategory
+		dataType: string
+		lineageTag: c66a9617-c33d-4d7e-8b1e-05cdcefa8ce3
+		summarizeBy: none
+		sourceColumn: ReportCategory
+
+	column GeneratedDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 1471717c-d63d-40ab-a63b-8669ab240d6e
+		summarizeBy: none
+		sourceColumn: GeneratedDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExportFormat
+		dataType: string
+		lineageTag: fe91141c-96e0-4044-b6ad-2ee22d264e5d
+		summarizeBy: none
+		sourceColumn: ExportFormat
+
+	column Owner
+		dataType: string
+		lineageTag: cc42cdb7-d1a6-41e4-9e40-41f966468a7e
+		summarizeBy: none
+		sourceColumn: Owner
+
+	column RefreshStatus
+		dataType: string
+		lineageTag: e79c39d1-75fa-4967-8aee-0ef9154b0f43
+		summarizeBy: none
+		sourceColumn: RefreshStatus
+
+	column DecisionSupportSummary
+		dataType: string
+		lineageTag: 827335e2-4541-4755-8a57-3ef7149c2b45
+		summarizeBy: none
+		sourceColumn: DecisionSupportSummary
+
+	column Status
+		dataType: string
+		lineageTag: 98624491-b9ac-451a-9ec3-830e84f140c5
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 11a1fb79-52e7-49aa-af1d-bd92a3c9fa77
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: f7c3a73a-0af9-4cb5-99dd-77a32cc9f8f0
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	partition Reports-fa4f2e82-77d8-52d0-8342-172f0ba94f1f = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\Reports.csv"), [Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"ReportID", type text}, {"ReportName", type text}, {"ReportCategory", type text}, {"GeneratedDate", type date}, {"ExportFormat", type text}, {"Owner", type text}, {"RefreshStatus", type text}, {"DecisionSupportSummary", type text}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}}, "en-US")
+				in
+				    #"Changed Type"
+

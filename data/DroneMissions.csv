@@ -1,0 +1,7 @@
+DroneMissionID,DroneID,FarmID,MissionDate,MissionState,DroneFlightStatus,BatteryPct,NDVIIndex,AerialCropHealthPct,ThermalStressZones,FlightCoveragePct,ImageCaptureStatus,LastAerialScan,HighRiskFieldZones,Status,LastSignalTime,HeartbeatState,PacketRate
+DM10518,AGR-D01,F001,2026-05-12,Active,Image Upload,56.6,0.77,61.7,6,71.6,Queued,2026-05-18T17:05,6,Online,2026-05-18T18:50,Live,14.0
+DM20518,AGR-D02,F002,2026-05-11,Standby,Standby,77.9,0.72,86.5,5,100,Queued,2026-05-18T18:29,2,Online,2026-05-18T18:26,Live,14.8
+DM30518,AGR-D03,F003,2026-05-15,Active,Image Upload,72.6,0.76,74.2,3,100,Complete,2026-05-18T13:44,1,Online,2026-05-18T19:08,Live,20.8
+DM40518,AGR-D04,F004,2026-05-11,Charging,Charging,57.5,0.76,82.9,0,84.1,Processing,2026-05-18T13:13,5,Online,2026-05-18T18:07,Live,13.1
+DM50518,AGR-D05,F005,2026-05-17,Active,In Flight,94.2,0.92,79.3,5,62.0,Streaming,2026-05-18T14:25,2,Online,2026-05-18T18:49,Live,17.7
+DM60518,AGR-D06,F006,2026-05-13,Active,In Flight,93.4,0.7,81.9,6,91.8,Streaming,2026-05-18T15:40,5,Online,2026-05-18T18:31,Live,11.1

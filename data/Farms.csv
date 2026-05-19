@@ -1,0 +1,7 @@
+FarmID,FarmName,Governorate,Region,AreaHa,Latitude,Longitude,FarmManager,IrrigationType,EnergyMode,Status,LastSignalTime,HeartbeatState
+F001,Delta North Smart Farm,Dakahlia,North Delta,42,31.0341,31.3807,Operations Team A,Drip,Solar Hybrid,Online,2026-05-18T18:44,Live
+F002,Nile Valley Precision Farm,Minya,Upper Egypt,58,28.1099,30.7503,Operations Team B,Smart Pivot,Solar Hybrid,Online,2026-05-18T18:43,Live
+F003,Coastal Greenhouse Cluster,Alexandria,Mediterranean,27,31.2001,29.9187,Operations Team C,Hydro Drip,Battery Backup,Online,2026-05-18T18:45,Live
+F004,Canal Desert Demonstration Farm,Ismailia,Canal Zone,64,30.5965,32.2715,Operations Team D,Subsurface Drip,Off-grid Solar,Online,2026-05-18T18:32,Live
+F005,Sinai Resilience Farm,North Sinai,Sinai,36,31.1313,33.8033,Operations Team E,Drip,Off-grid Solar,Online,2026-05-18T18:59,Live
+F006,Oasis Fruit Intelligence Farm,New Valley,Western Desert,73,25.439,30.5586,Operations Team F,Smart Pivot,Solar Hybrid,Attention,2026-05-18T18:55,Delayed

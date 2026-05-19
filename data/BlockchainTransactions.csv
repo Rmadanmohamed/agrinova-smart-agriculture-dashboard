@@ -1,0 +1,49 @@
+TransactionID,BlockIndex,FarmID,TransactionDate,RecordType,BlockchainNetworkStatus,VerifiedFarmRecords,SecureTransactions,SmartContractStatus,DataIntegrityStatus,HashPreview,PreviousHashPreview,ValidationState,TraceabilityStage,TimelineStep,Status,LastSignalTime,HeartbeatState,PacketRate
+TX00001,1,F005,2026-04-26,Robot Mission,Operational,48,7,Active,Pending Review,6d60317436a937239d,000000000000000000,Pending Review,Field,Verified,Attention,2026-05-18T19:01,Live,7.3
+TX00002,2,F005,2026-04-27,Crop Scan,Operational,15,4,Active,Pending Review,006c98abc47e73f210,6d60317436a937239d,Pending Review,Ledger,Stored,Attention,2026-05-18T17:49,Live,9.0
+TX00003,3,F001,2026-04-19,Crop Scan,Operational,70,17,Active,Verified,4a7cc695a86f27337e,006c98abc47e73f210,Verified,Cloud,Verified,Online,2026-05-18T17:40,Live,12.9
+TX00004,4,F005,2026-04-29,Energy Record,Operational,73,26,Active,Pending Review,ae661d4c4e441c5c8b,4a7cc695a86f27337e,Pending Review,Cloud,Verified,Attention,2026-05-18T17:41,Live,10.2
+TX00005,5,F005,2026-05-10,Crop Scan,Operational,36,20,Active,Verified,afa03b400267dc616a,ae661d4c4e441c5c8b,Verified,Ledger,Verified,Online,2026-05-18T18:49,Live,14.2
+TX00006,6,F004,2026-05-14,Irrigation Action,Operational,24,26,Queued,Verified,a5607fadf09c47e5f3,afa03b400267dc616a,Verified,Gateway,Stored,Online,2026-05-18T18:32,Live,10.2
+TX00007,7,F005,2026-04-28,Crop Scan,Operational,25,26,Active,Verified,411378f72a2c00162d,a5607fadf09c47e5f3,Verified,Supply Chain,Audited,Online,2026-05-18T18:57,Live,4.5
+TX00008,8,F001,2026-05-05,Crop Scan,Operational,47,25,Queued,Verified,e92c83fde8776508af,411378f72a2c00162d,Verified,Gateway,Stored,Online,2026-05-18T18:36,Live,6.8
+TX00009,9,F003,2026-04-30,Irrigation Action,Operational,36,18,Active,Pending Review,8ce8d688dd8209831e,e92c83fde8776508af,Pending Review,Cloud,Submitted,Attention,2026-05-18T19:03,Live,9.9
+TX00010,10,F006,2026-04-25,Crop Scan,Operational,59,26,Queued,Pending Review,1a41bac7aa4e20e97c,8ce8d688dd8209831e,Pending Review,Field,Submitted,Attention,2026-05-18T18:49,Live,8.2
+TX00011,11,F004,2026-04-29,Sensor Reading,Operational,62,21,Active,Pending Review,1be097891aa3464558,1a41bac7aa4e20e97c,Pending Review,Ledger,Verified,Attention,2026-05-18T18:09,Live,12.6
+TX00012,12,F001,2026-05-14,Robot Mission,Operational,75,22,Queued,Verified,70df0ab95ce8d451b3,1be097891aa3464558,Verified,Gateway,Verified,Online,2026-05-18T18:06,Live,14.8
+TX00013,13,F003,2026-05-15,Drone Scan,Operational,64,5,Active,Verified,7ca6fe0c2fcd6d7695,70df0ab95ce8d451b3,Verified,Field,Stored,Online,2026-05-18T17:41,Live,5.5
+TX00014,14,F006,2026-04-19,Irrigation Action,Operational,72,22,Active,Verified,3d37163246ba31a154,7ca6fe0c2fcd6d7695,Verified,Field,Stored,Online,2026-05-18T18:58,Live,4.2
+TX00015,15,F004,2026-05-09,Market Record,Operational,12,13,Queued,Verified,b580602b31814d41aa,3d37163246ba31a154,Verified,Supply Chain,Verified,Online,2026-05-18T18:49,Live,8.9
+TX00016,16,F006,2026-05-17,Energy Record,Operational,86,24,Queued,Verified,82bbe6872b2100b589,b580602b31814d41aa,Verified,Gateway,Verified,Online,2026-05-18T18:02,Live,9.3
+TX00017,17,F002,2026-05-06,Energy Record,Operational,36,7,Active,Pending Review,8c3f7ea57e54a0d9c8,82bbe6872b2100b589,Pending Review,Ledger,Audited,Attention,2026-05-18T19:07,Live,8.9
+TX00018,18,F003,2026-05-06,Crop Scan,Operational,64,4,Active,Verified,e1003be771dc50d51c,8c3f7ea57e54a0d9c8,Verified,Supply Chain,Submitted,Online,2026-05-18T17:52,Live,7.4
+TX00019,19,F005,2026-04-29,Crop Scan,Operational,39,16,Active,Verified,a73af7dc0afc1fa2b5,e1003be771dc50d51c,Verified,Cloud,Audited,Online,2026-05-18T18:28,Live,8.0
+TX00020,20,F006,2026-04-24,Sensor Reading,Operational,12,12,Active,Verified,4cb9ab6521bfdea7b4,a73af7dc0afc1fa2b5,Verified,Supply Chain,Verified,Online,2026-05-18T18:27,Live,12.5
+TX00021,21,F006,2026-04-18,Drone Scan,Operational,22,10,Active,Verified,8c5b1db1f6f22dbb8a,4cb9ab6521bfdea7b4,Verified,Cloud,Audited,Online,2026-05-18T18:16,Live,11.0
+TX00022,22,F005,2026-05-04,Sensor Reading,Operational,78,4,Active,Verified,65f798cd98430ddd9c,8c5b1db1f6f22dbb8a,Verified,Field,Audited,Online,2026-05-18T18:11,Live,5.8
+TX00023,23,F005,2026-04-18,Sensor Reading,Operational,48,12,Active,Verified,2701058e8f92d26b6e,65f798cd98430ddd9c,Verified,Gateway,Audited,Online,2026-05-18T19:00,Live,10.9
+TX00024,24,F002,2026-04-29,Irrigation Action,Operational,13,19,Active,Verified,68041db5391e268b1a,2701058e8f92d26b6e,Verified,Ledger,Audited,Online,2026-05-18T17:43,Live,13.4
+TX00025,25,F003,2026-05-10,Energy Record,Operational,59,11,Active,Verified,256555d99c69c25b9f,68041db5391e268b1a,Verified,Gateway,Stored,Online,2026-05-18T17:49,Live,4.5
+TX00026,26,F003,2026-05-09,Market Record,Operational,82,12,Queued,Verified,4e7855451b7c0a1842,256555d99c69c25b9f,Verified,Field,Audited,Online,2026-05-18T18:57,Live,5.4
+TX00027,27,F001,2026-05-18,Crop Scan,Operational,47,21,Active,Verified,6726d44b04bb5da33a,4e7855451b7c0a1842,Verified,Ledger,Verified,Online,2026-05-18T18:46,Live,7.1
+TX00028,28,F005,2026-05-18,Drone Scan,Operational,34,15,Active,Verified,05faa415b53cd6c186,6726d44b04bb5da33a,Verified,Field,Verified,Online,2026-05-18T17:54,Live,13.9
+TX00029,29,F001,2026-04-26,Robot Mission,Operational,17,4,Active,Verified,79fc98f3f2aea61854,05faa415b53cd6c186,Verified,Ledger,Stored,Online,2026-05-18T18:59,Live,6.4
+TX00030,30,F006,2026-05-10,Energy Record,Operational,62,12,Active,Verified,b3977882a5f331d348,79fc98f3f2aea61854,Verified,Field,Submitted,Online,2026-05-18T18:25,Live,12.8
+TX00031,31,F005,2026-04-19,Sensor Reading,Operational,40,23,Active,Pending Review,99d6af424c1655f98d,b3977882a5f331d348,Pending Review,Ledger,Submitted,Attention,2026-05-18T17:53,Live,15.5
+TX00032,32,F005,2026-04-20,Drone Scan,Operational,73,22,Active,Verified,2620358193c5ebd11d,99d6af424c1655f98d,Verified,Supply Chain,Stored,Online,2026-05-18T18:57,Live,10.8
+TX00033,33,F005,2026-05-12,Crop Scan,Operational,23,21,Queued,Verified,b9a45fbbad05b83f25,2620358193c5ebd11d,Verified,Field,Stored,Online,2026-05-18T18:55,Live,11.6
+TX00034,34,F004,2026-04-26,Robot Mission,Operational,63,4,Active,Verified,503946dc1e79874109,b9a45fbbad05b83f25,Verified,Ledger,Verified,Online,2026-05-18T17:43,Live,7.0
+TX00035,35,F004,2026-04-21,Market Record,Operational,71,28,Queued,Verified,efde35ba709eff9d5e,503946dc1e79874109,Verified,Gateway,Audited,Online,2026-05-18T18:23,Live,12.5
+TX00036,36,F003,2026-04-24,Market Record,Operational,82,6,Active,Verified,8c4fdf19e38885f9f3,efde35ba709eff9d5e,Verified,Ledger,Stored,Online,2026-05-18T18:13,Live,12.1
+TX00037,37,F006,2026-05-07,Sensor Reading,Operational,86,25,Active,Verified,4bf047b44600ed3b6c,8c4fdf19e38885f9f3,Verified,Supply Chain,Submitted,Online,2026-05-18T18:53,Live,8.4
+TX00038,38,F001,2026-04-21,Crop Scan,Operational,45,7,Active,Pending Review,eb0cfaec5a138a9d0c,4bf047b44600ed3b6c,Pending Review,Gateway,Stored,Attention,2026-05-18T19:00,Live,4.9
+TX00039,39,F002,2026-05-07,Market Record,Operational,49,17,Active,Verified,daae295f1ffdb091fc,eb0cfaec5a138a9d0c,Verified,Field,Audited,Online,2026-05-18T18:34,Live,15.6
+TX00040,40,F001,2026-04-28,Crop Scan,Operational,67,15,Queued,Verified,003698762b1ceb286b,daae295f1ffdb091fc,Verified,Gateway,Submitted,Online,2026-05-18T18:32,Live,9.9
+TX00041,41,F002,2026-04-23,Energy Record,Operational,31,22,Active,Pending Review,38169b67e7c7d8ccbd,003698762b1ceb286b,Pending Review,Cloud,Verified,Attention,2026-05-18T18:28,Live,11.1
+TX00042,42,F001,2026-04-18,Crop Scan,Operational,62,5,Active,Verified,bc3174ade902b2354f,38169b67e7c7d8ccbd,Verified,Ledger,Stored,Online,2026-05-18T17:58,Live,14.5
+TX00043,43,F001,2026-05-14,Sensor Reading,Operational,14,28,Active,Verified,bd16d3764d7bbe2909,bc3174ade902b2354f,Verified,Supply Chain,Stored,Online,2026-05-18T17:46,Live,12.7
+TX00044,44,F002,2026-05-10,Irrigation Action,Operational,46,5,Queued,Pending Review,6de14f8a6e601651ad,bd16d3764d7bbe2909,Pending Review,Supply Chain,Audited,Attention,2026-05-18T18:37,Live,11.8
+TX00045,45,F003,2026-05-10,Drone Scan,Operational,86,13,Queued,Pending Review,038cc0e0df21878bef,6de14f8a6e601651ad,Pending Review,Ledger,Audited,Attention,2026-05-18T18:58,Live,12.0
+TX00046,46,F004,2026-05-10,Energy Record,Operational,59,27,Active,Verified,7c79e51bd6c4c0c311,038cc0e0df21878bef,Verified,Field,Stored,Online,2026-05-18T19:06,Live,9.0
+TX00047,47,F005,2026-05-08,Market Record,Operational,30,12,Active,Verified,a9a06ee2eb128a9fc0,7c79e51bd6c4c0c311,Verified,Ledger,Verified,Online,2026-05-18T17:43,Live,10.5
+TX00048,48,F005,2026-04-21,Drone Scan,Operational,73,13,Active,Pending Review,9b49744a947810c7a0,a9a06ee2eb128a9fc0,Pending Review,Gateway,Submitted,Attention,2026-05-18T18:30,Live,15.1

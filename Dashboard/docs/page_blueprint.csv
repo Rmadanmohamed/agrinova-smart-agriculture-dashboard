@@ -1,0 +1,64 @@
+Page,VisualName,VisualType,X,Y,Width,Height,FieldsOrMeasures,TooltipPage,DrillThroughTarget
+AgriNova Overview,Sidebar Navigation,"Grouped shapes, SVG icons, page buttons",0,0,260,1080,Navigation buttons and active page indicator,,
+AgriNova Overview,Header System Bar,Grouped shapes and cards,280,24,1610,86,"Page title, current date label, Live System Signals, KPI Status Label",,
+Smart Farm Monitoring,Sidebar Navigation,"Grouped shapes, SVG icons, page buttons",0,0,260,1080,Navigation buttons and active page indicator,,
+Smart Farm Monitoring,Header System Bar,Grouped shapes and cards,280,24,1610,86,"Page title, current date label, Live System Signals, KPI Status Label",,
+Crop Health & Vision Intelligence,Sidebar Navigation,"Grouped shapes, SVG icons, page buttons",0,0,260,1080,Navigation buttons and active page indicator,,
+Crop Health & Vision Intelligence,Header System Bar,Grouped shapes and cards,280,24,1610,86,"Page title, current date label, Live System Signals, KPI Status Label",,
+Robotics & Drone Operations,Sidebar Navigation,"Grouped shapes, SVG icons, page buttons",0,0,260,1080,Navigation buttons and active page indicator,,
+Robotics & Drone Operations,Header System Bar,Grouped shapes and cards,280,24,1610,86,"Page title, current date label, Live System Signals, KPI Status Label",,
+IoT Sensor Network,Sidebar Navigation,"Grouped shapes, SVG icons, page buttons",0,0,260,1080,Navigation buttons and active page indicator,,
+IoT Sensor Network,Header System Bar,Grouped shapes and cards,280,24,1610,86,"Page title, current date label, Live System Signals, KPI Status Label",,
+Price Prediction,Sidebar Navigation,"Grouped shapes, SVG icons, page buttons",0,0,260,1080,Navigation buttons and active page indicator,,
+Price Prediction,Header System Bar,Grouped shapes and cards,280,24,1610,86,"Page title, current date label, Live System Signals, KPI Status Label",,
+Blockchain Security,Sidebar Navigation,"Grouped shapes, SVG icons, page buttons",0,0,260,1080,Navigation buttons and active page indicator,,
+Blockchain Security,Header System Bar,Grouped shapes and cards,280,24,1610,86,"Page title, current date label, Live System Signals, KPI Status Label",,
+AI Assistant,Sidebar Navigation,"Grouped shapes, SVG icons, page buttons",0,0,260,1080,Navigation buttons and active page indicator,,
+AI Assistant,Header System Bar,Grouped shapes and cards,280,24,1610,86,"Page title, current date label, Live System Signals, KPI Status Label",,
+Sustainability & Energy,Sidebar Navigation,"Grouped shapes, SVG icons, page buttons",0,0,260,1080,Navigation buttons and active page indicator,,
+Sustainability & Energy,Header System Bar,Grouped shapes and cards,280,24,1610,86,"Page title, current date label, Live System Signals, KPI Status Label",,
+Alerts & Reports,Sidebar Navigation,"Grouped shapes, SVG icons, page buttons",0,0,260,1080,Navigation buttons and active page indicator,,
+Alerts & Reports,Header System Bar,Grouped shapes and cards,280,24,1610,86,"Page title, current date label, Live System Signals, KPI Status Label",,
+AgriNova Overview,Executive KPI Strip,Card row,280,130,1320,118,Total Monitored Farms; Active IoT Sensors; Active Robots; Active Drones; System Health Index,,DT_FarmProfile
+AgriNova Overview,System Health Gauge,Gauge,1620,130,270,260,System Health Index,TT_CropHealth,
+AgriNova Overview,Farm Map,Map,280,270,520,330,Farms[Latitude]; Farms[Longitude]; Farms[Status],,DT_FarmProfile
+AgriNova Overview,Crop Health Area,Area chart,830,270,500,330,Date[Date]; Crop Health Score,TT_CropHealth,DT_CropAnalytics
+AgriNova Overview,Live Telemetry Panel,Matrix/cards,1360,420,530,180,HeartbeatState; LastSignalTime; PacketRate,TT_IoTUptime,
+AgriNova Overview,Alerts Summary,Matrix,280,630,620,310,Alerts[AlertType]; Alerts[PriorityLevel]; Open Alerts; Critical Alerts,TT_AlertSeverity,DT_AlertDetail
+AgriNova Overview,Recommendation Feed,Table,930,630,960,310,AIRecommendations[InteractionType]; AIRecommendations[RecommendationText],,DT_CropAnalytics
+Smart Farm Monitoring,Farm Crop Zone Slicers,Slicers,280,130,410,130,Farms[FarmName]; Crops[CropName]; Sensors[Zone]; Date[Date],,
+Smart Farm Monitoring,Soil KPI Grid,Card grid,720,130,1170,170,Average Soil Moisture; Average Soil Temperature; Average Humidity; Average pH; Average Nitrogen; Average Phosphorus; Average Potassium; Average Light Intensity; Average CO2; Average Leaf Wetness,TT_WaterEfficiency,DT_SensorDetail
+Smart Farm Monitoring,Moisture pH Trends,Line and area chart,280,330,760,330,Date[Date]; Average Soil Moisture; Average pH,TT_WaterEfficiency,DT_CropAnalytics
+Smart Farm Monitoring,Zone Heatmap,Matrix with conditional formatting,1070,330,820,330,Sensors[Zone]; Sensors[SensorType]; SoilReadings metrics,,DT_SensorDetail
+Smart Farm Monitoring,Latest Sensor Readings,Matrix,280,690,1610,250,Sensors[SensorID]; Sensors[Status]; SoilReadings latest values; LastSignalTime,TT_IoTUptime,DT_SensorDetail
+Crop Health & Vision Intelligence,Health KPI Row,Card row,280,130,1610,140,Crop Health Score; DetectedDisease count; PestRiskLevel; PlantStressIndicator,TT_CropHealth,DT_CropAnalytics
+Crop Health & Vision Intelligence,Disease Distribution,Stacked bar chart,280,300,520,290,Crops[CropName]; CropHealthScans[DetectedDisease],TT_CropHealth,
+Crop Health & Vision Intelligence,Scan History,Table,830,300,1060,290,ScanID; ScanDate; CropHealthScore; DetectedDisease; PestRiskLevel,TT_CropHealth,DT_CropScan
+Crop Health & Vision Intelligence,Diagnosis Action Panel,Multi-row cards,280,620,1610,320,ImageDiagnosisResult; RecommendedTreatment; PreventiveAction,TT_CropHealth,DT_CropScan
+Robotics & Drone Operations,Robot Operations Panel,"Cards, gauges, bars",280,130,790,810,Robot Battery; Robot Route Progress; Robot Field Coverage; ObstacleAlerts; LastMissionSummary,TT_RobotStatus,DT_RobotMission
+Robotics & Drone Operations,Drone Operations Panel,"Cards, map placeholder, bars",1100,130,790,810,Drone Battery; Drone Flight Coverage; Aerial Crop Health; Thermal Stress Zones; NDVIIndex,TT_DroneCoverage,DT_DroneMission
+IoT Sensor Network,Network KPI Row,Card row,280,130,1610,130,Sensor Uptime; Data Packets Received; Live System Signals; EdgeGateway count,TT_IoTUptime,DT_SensorDetail
+IoT Sensor Network,Gateway Tree,Decomposition tree,280,290,640,360,Farms[FarmName]; Sensors[EdgeGateway]; Sensors[SensorType]; Sensors[CommunicationHealth],TT_IoTUptime,DT_SensorDetail
+IoT Sensor Network,Communication Heatmap,Matrix heatmap,950,290,940,360,Farms[FarmName]; Sensors[SensorType]; Sensor Uptime,TT_IoTUptime,
+IoT Sensor Network,Packet Rate Trend,Line chart,280,680,1610,260,LastSignalTime; Data Packets Received,TT_IoTUptime,
+Price Prediction,Commodity Slicer,Slicer,280,130,300,160,PricePredictions[CropName],,
+Price Prediction,Market KPI Row,Card row,610,130,1280,160,Current Market Price; Predicted Price After 60 Days; Expected Price Change %; Market Risk Score; Profitability Signal,TT_MarketRisk,DT_PriceCommodity
+Price Prediction,Price Trajectory,Area chart,280,330,930,360,Date[Date]; Current Market Price; Predicted Price After 60 Days,TT_Profitability,DT_PriceCommodity
+Price Prediction,Impact Factors,Bar chart,1240,330,650,360,SupplyDemandImpact; USDEGPImpact; InflationImpact; SeasonalEffect,TT_MarketRisk,
+Price Prediction,Commodity Matrix,Matrix,280,720,1610,220,CropName; CurrentMarketPriceEGP; PredictedPrice60DaysEGP; ExpectedTrend; VolatilityLevel; SmartRecommendation,TT_Profitability,DT_PriceCommodity
+Blockchain Security,Blockchain KPI Row,Card row,280,130,1610,130,Blockchain Integrity; Verified Farm Records; Secure Transactions; SmartContractStatus,TT_BlockchainIntegrity,DT_BlockchainTransaction
+Blockchain Security,Connected Block History,Card strip with connector shapes,280,300,1610,330,BlockIndex; RecordType; HashPreview; PreviousHashPreview; ValidationState,TT_BlockchainIntegrity,DT_BlockchainTransaction
+Blockchain Security,Validation Timeline,Line and table,280,670,770,270,TransactionDate; TimelineStep; ValidationState,TT_BlockchainIntegrity,
+Blockchain Security,Traceability Audit Panel,Matrix,1080,670,810,270,TraceabilityStage; DataIntegrityStatus; TransactionID,TT_BlockchainIntegrity,DT_BlockchainTransaction
+AI Assistant,Assistant Chat Surface,Static chat composition,280,130,880,810,FarmerQuestion; RecommendationText; AssistantAvailability,,DT_CropAnalytics
+AI Assistant,Suggested Questions,Button/chip group,1190,130,700,170,InteractionType,,
+AI Assistant,Guidance Cards,Multi-row cards,1190,330,700,300,Crop Advice; Disease Explanation; Irrigation Guidance; Fertilizer Guidance; Market Guidance,,
+AI Assistant,Image Diagnosis Summary,Card/table,1190,660,700,280,ImageDiagnosisResult; RecommendedTreatment; PreventiveAction,TT_CropHealth,DT_CropScan
+Sustainability & Energy,Energy KPI Row,Card row,280,130,1610,140,Energy Status; Renewable Energy Usage; Carbon Reduction; Energy Consumption,TT_Energy,
+Sustainability & Energy,Energy Trend,Area chart,280,300,850,360,Date[Date]; Renewable Energy Usage; Energy Consumption,TT_Energy,
+Sustainability & Energy,Charging Status Matrix,Matrix,1160,300,730,360,FarmName; RobotChargingStatus; DroneChargingStatus; BatteryLevelPct,TT_Energy,
+Sustainability & Energy,Carbon Reduction Panel,Bar chart and cards,280,690,1610,250,FarmName; Carbon Reduction; OffGridOperationStatus,TT_Energy,DT_FarmProfile
+Alerts & Reports,Alert Command Center,Matrix,280,130,760,390,AlertType; PriorityLevel; ResolutionStatus; RecommendedAction,TT_AlertSeverity,DT_AlertDetail
+Alerts & Reports,Priority Breakdown,Stacked column chart,1070,130,820,390,PriorityLevel; AlertType; Open Alerts,TT_AlertSeverity,
+Alerts & Reports,Recommended Actions Feed,Table,280,550,760,390,AlertMessage; RecommendedAction; ResolutionStatus,TT_AlertSeverity,DT_AlertDetail
+Alerts & Reports,Report Catalog,Table/buttons,1070,550,820,390,ReportName; GeneratedDate; ExportFormat; DecisionSupportSummary,,

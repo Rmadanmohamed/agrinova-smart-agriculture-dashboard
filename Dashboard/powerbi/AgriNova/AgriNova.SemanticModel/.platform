@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "AgriNova"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0ba1635b-e7fd-44ae-a565-24b2909efca7"
+  }
+}

@@ -1,0 +1,103 @@
+relationship Farms_FarmID_to_Crops_FarmID
+	fromColumn: Crops.FarmID
+	toColumn: Farms.FarmID
+
+relationship Farms_FarmID_to_Sensors_FarmID
+	fromColumn: Sensors.FarmID
+	toColumn: Farms.FarmID
+
+relationship Farms_FarmID_to_WeatherReadings_FarmID
+	fromColumn: WeatherReadings.FarmID
+	toColumn: Farms.FarmID
+
+relationship Farms_FarmID_to_RobotMissions_FarmID
+	fromColumn: RobotMissions.FarmID
+	toColumn: Farms.FarmID
+
+relationship Farms_FarmID_to_DroneMissions_FarmID
+	fromColumn: DroneMissions.FarmID
+	toColumn: Farms.FarmID
+
+relationship Farms_FarmID_to_CropHealthScans_FarmID
+	isActive: false
+	fromColumn: CropHealthScans.FarmID
+	toColumn: Farms.FarmID
+
+relationship Farms_FarmID_to_BlockchainTransactions_FarmID
+	fromColumn: BlockchainTransactions.FarmID
+	toColumn: Farms.FarmID
+
+relationship Farms_FarmID_to_AIRecommendations_FarmID
+	isActive: false
+	fromColumn: AIRecommendations.FarmID
+	toColumn: Farms.FarmID
+
+relationship Farms_FarmID_to_Alerts_FarmID
+	fromColumn: Alerts.FarmID
+	toColumn: Farms.FarmID
+
+relationship Farms_FarmID_to_EnergyUsage_FarmID
+	fromColumn: EnergyUsage.FarmID
+	toColumn: Farms.FarmID
+
+relationship Crops_CropID_to_SoilReadings_CropID
+	isActive: false
+	fromColumn: SoilReadings.CropID
+	toColumn: Crops.CropID
+
+relationship Crops_CropID_to_CropHealthScans_CropID
+	fromColumn: CropHealthScans.CropID
+	toColumn: Crops.CropID
+
+relationship Crops_CropID_to_AIRecommendations_CropID
+	fromColumn: AIRecommendations.CropID
+	toColumn: Crops.CropID
+
+relationship Sensors_SensorID_to_SoilReadings_SensorID
+	fromColumn: SoilReadings.SensorID
+	toColumn: Sensors.SensorID
+
+relationship Date_Date_to_SoilReadings_Date
+	fromColumn: SoilReadings.Date
+	toColumn: Date.Date
+
+relationship Date_Date_to_WeatherReadings_Date
+	fromColumn: WeatherReadings.Date
+	toColumn: Date.Date
+
+relationship Date_Date_to_EnergyUsage_Date
+	fromColumn: EnergyUsage.Date
+	toColumn: Date.Date
+
+relationship Date_Date_to_PricePredictions_Date
+	fromColumn: PricePredictions.Date
+	toColumn: Date.Date
+
+relationship Date_Date_to_CropHealthScans_ScanDate
+	fromColumn: CropHealthScans.ScanDate
+	toColumn: Date.Date
+
+relationship Date_Date_to_RobotMissions_MissionDate
+	fromColumn: RobotMissions.MissionDate
+	toColumn: Date.Date
+
+relationship Date_Date_to_DroneMissions_MissionDate
+	fromColumn: DroneMissions.MissionDate
+	toColumn: Date.Date
+
+relationship Date_Date_to_BlockchainTransactions_TransactionDate
+	fromColumn: BlockchainTransactions.TransactionDate
+	toColumn: Date.Date
+
+relationship Date_Date_to_AIRecommendations_RecommendationDate
+	fromColumn: AIRecommendations.RecommendationDate
+	toColumn: Date.Date
+
+relationship Date_Date_to_Alerts_AlertDate
+	fromColumn: Alerts.AlertDate
+	toColumn: Date.Date
+
+relationship Date_Date_to_Reports_GeneratedDate
+	fromColumn: Reports.GeneratedDate
+	toColumn: Date.Date
+

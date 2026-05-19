@@ -1,0 +1,121 @@
+table RobotMissions
+	lineageTag: 7a886b19-a4ec-581c-a756-90b09fa04754
+
+	column RobotMissionID
+		dataType: string
+		lineageTag: 979333f1-40d1-4f14-b13b-f708eb384509
+		summarizeBy: none
+		sourceColumn: RobotMissionID
+
+	column RobotID
+		dataType: string
+		lineageTag: d56ac240-310a-4e1b-9795-bfa813bd7981
+		summarizeBy: none
+		sourceColumn: RobotID
+
+	column FarmID
+		dataType: string
+		lineageTag: 3ea292d2-4196-49d1-a73a-634f0e77af99
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column MissionDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 4937b556-d54a-4d2c-893d-71f20459732b
+		summarizeBy: none
+		sourceColumn: MissionDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column MissionState
+		dataType: string
+		lineageTag: e8ffe7b3-ecc7-49e9-921c-7d468aa21cc2
+		summarizeBy: none
+		sourceColumn: MissionState
+
+	column RobotStatus
+		dataType: string
+		lineageTag: 63689c98-2b31-4650-8c0f-cebd9f4bf7a4
+		summarizeBy: none
+		sourceColumn: RobotStatus
+
+	column BatteryPct
+		dataType: double
+		formatString: 0.00
+		lineageTag: fcfce539-f3df-4705-bf6b-1dad5f45e396
+		summarizeBy: sum
+		sourceColumn: BatteryPct
+
+	column RouteProgressPct
+		dataType: double
+		formatString: 0.00
+		lineageTag: c8d21675-2df2-4ec1-8604-fd2c225b6728
+		summarizeBy: sum
+		sourceColumn: RouteProgressPct
+
+	column SoilScanningProgressPct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 4c8573bd-694b-4fdc-b68f-ffa8d9dff86e
+		summarizeBy: sum
+		sourceColumn: SoilScanningProgressPct
+
+	column FieldCoveragePct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 76a33d2d-a457-4a1a-bb16-e9e4712515d6
+		summarizeBy: sum
+		sourceColumn: FieldCoveragePct
+
+	column ObstacleAlerts
+		dataType: int64
+		formatString: 0
+		lineageTag: aa6520b6-6916-4ecc-bacf-2490a2b66de9
+		summarizeBy: sum
+		sourceColumn: ObstacleAlerts
+
+	column LastMissionSummary
+		dataType: string
+		lineageTag: 0ffcd7fe-1a7f-404d-be93-96e4eddbf45d
+		summarizeBy: none
+		sourceColumn: LastMissionSummary
+
+	column Status
+		dataType: string
+		lineageTag: 7b8c91a4-ec78-4ec9-b4ca-26771231219d
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: ebcc5d90-05e4-4313-ba1b-52527c5533c1
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: 99c39b4d-ee5c-40ec-a3ba-e109286e4f28
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	column PacketRate
+		dataType: double
+		formatString: 0.00
+		lineageTag: 97b09383-1def-418e-8f0a-b366d26005fa
+		summarizeBy: sum
+		sourceColumn: PacketRate
+
+	partition RobotMissions-9618adef-5713-5b85-924e-3ae3afce4c0a = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\RobotMissions.csv"), [Delimiter=",", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"RobotMissionID", type text}, {"RobotID", type text}, {"FarmID", type text}, {"MissionDate", type date}, {"MissionState", type text}, {"RobotStatus", type text}, {"BatteryPct", type number}, {"RouteProgressPct", type number}, {"SoilScanningProgressPct", type number}, {"FieldCoveragePct", type number}, {"ObstacleAlerts", Int64.Type}, {"LastMissionSummary", type text}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}, {"PacketRate", type number}}, "en-US")
+				in
+				    #"Changed Type"
+

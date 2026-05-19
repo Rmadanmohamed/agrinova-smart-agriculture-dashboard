@@ -1,0 +1,170 @@
+-- AgriNova Power BI measures
+-- Create a table named AgriNova_Measures, then paste these measures into it.
+
+Total Monitored Farms =
+DISTINCTCOUNT ( Farms[FarmID] )
+
+Active IoT Sensors =
+CALCULATE ( DISTINCTCOUNT ( Sensors[SensorID] ), Sensors[Status] = "Online" )
+
+Active Robots =
+CALCULATE ( DISTINCTCOUNT ( RobotMissions[RobotID] ), RobotMissions[MissionState] = "Active" )
+
+Active Drones =
+CALCULATE ( DISTINCTCOUNT ( DroneMissions[DroneID] ), DroneMissions[MissionState] = "Active" )
+
+Crop Health Score =
+AVERAGE ( CropHealthScans[CropHealthScore] )
+
+Water Efficiency =
+VAR moisture = AVERAGE ( SoilReadings[SoilMoisturePct] )
+VAR stableRange = IF ( moisture >= 38 && moisture <= 68, 1, 0.82 )
+RETURN ROUND ( stableRange * 100, 1 )
+
+Energy Status =
+AVERAGE ( EnergyUsage[BatteryLevelPct] )
+
+Blockchain Integrity =
+DIVIDE (
+    CALCULATE ( COUNTROWS ( BlockchainTransactions ), BlockchainTransactions[ValidationState] = "Verified" ),
+    COUNTROWS ( BlockchainTransactions )
+) * 100
+
+AI Assistant Availability =
+DIVIDE (
+    CALCULATE ( COUNTROWS ( AIRecommendations ), AIRecommendations[AssistantAvailability] = "Available" ),
+    COUNTROWS ( AIRecommendations )
+) * 100
+
+Open Alerts =
+CALCULATE ( COUNTROWS ( Alerts ), Alerts[ResolutionStatus] <> "Resolved" )
+
+Critical Alerts =
+CALCULATE ( COUNTROWS ( Alerts ), Alerts[PriorityLevel] = "Critical" )
+
+Average Soil Moisture =
+AVERAGE ( SoilReadings[SoilMoisturePct] )
+
+Average Soil Temperature =
+AVERAGE ( SoilReadings[SoilTempC] )
+
+Average Humidity =
+AVERAGE ( SoilReadings[HumidityPct] )
+
+Average pH =
+AVERAGE ( SoilReadings[PH] )
+
+Average Nitrogen =
+AVERAGE ( SoilReadings[NitrogenPPM] )
+
+Average Phosphorus =
+AVERAGE ( SoilReadings[PhosphorusPPM] )
+
+Average Potassium =
+AVERAGE ( SoilReadings[PotassiumPPM] )
+
+Average Light Intensity =
+AVERAGE ( SoilReadings[LightLux] )
+
+Average CO2 =
+AVERAGE ( SoilReadings[CO2PPM] )
+
+Average Leaf Wetness =
+AVERAGE ( SoilReadings[LeafWetnessPct] )
+
+Sensor Uptime =
+AVERAGE ( Sensors[CommunicationHealth] )
+
+Data Packets Received =
+SUM ( Sensors[PacketRate] )
+
+Robot Battery =
+AVERAGE ( RobotMissions[BatteryPct] )
+
+Robot Route Progress =
+AVERAGE ( RobotMissions[RouteProgressPct] )
+
+Robot Field Coverage =
+AVERAGE ( RobotMissions[FieldCoveragePct] )
+
+Drone Battery =
+AVERAGE ( DroneMissions[BatteryPct] )
+
+Drone Flight Coverage =
+AVERAGE ( DroneMissions[FlightCoveragePct] )
+
+Aerial Crop Health =
+AVERAGE ( DroneMissions[AerialCropHealthPct] )
+
+Thermal Stress Zones =
+SUM ( DroneMissions[ThermalStressZones] )
+
+Current Market Price =
+AVERAGE ( PricePredictions[CurrentMarketPriceEGP] )
+
+Predicted Price After 60 Days =
+CALCULATE (
+    AVERAGE ( PricePredictions[PredictedPrice60DaysEGP] ),
+    PricePredictions[HorizonDays] = 60
+)
+
+Expected Price Change =
+[Predicted Price After 60 Days] - [Current Market Price]
+
+Expected Price Change % =
+DIVIDE ( [Expected Price Change], [Current Market Price] )
+
+Market Risk Score =
+VAR highRisk = CALCULATE ( COUNTROWS ( PricePredictions ), PricePredictions[MarketRisk] = "High" )
+VAR totalRows = COUNTROWS ( PricePredictions )
+RETURN DIVIDE ( highRisk, totalRows ) * 100
+
+Profitability Signal =
+DIVIDE (
+    CALCULATE ( COUNTROWS ( PricePredictions ), PricePredictions[ProfitabilityIndicator] = "Attractive" ),
+    COUNTROWS ( PricePredictions )
+) * 100
+
+Verified Farm Records =
+SUM ( BlockchainTransactions[VerifiedFarmRecords] )
+
+Secure Transactions =
+SUM ( BlockchainTransactions[SecureTransactions] )
+
+Renewable Energy Usage =
+AVERAGE ( EnergyUsage[RenewableEnergyUsagePct] )
+
+Carbon Reduction =
+SUM ( EnergyUsage[CarbonReductionKg] )
+
+Energy Consumption =
+SUM ( EnergyUsage[EnergyConsumptionKwh] )
+
+Report Count =
+COUNTROWS ( Reports )
+
+Live System Signals =
+CALCULATE ( COUNTROWS ( Sensors ), Sensors[HeartbeatState] = "Live" )
+    + CALCULATE ( COUNTROWS ( RobotMissions ), RobotMissions[HeartbeatState] = "Live" )
+    + CALCULATE ( COUNTROWS ( DroneMissions ), DroneMissions[HeartbeatState] = "Live" )
+    + CALCULATE ( COUNTROWS ( BlockchainTransactions ), BlockchainTransactions[HeartbeatState] = "Live" )
+
+System Health Index =
+ROUND (
+    DIVIDE (
+        [Crop Health Score] + [Water Efficiency] + [Sensor Uptime] + [Blockchain Integrity] + [AI Assistant Availability],
+        5
+    ),
+    1
+)
+
+KPI Status Label =
+VAR valueToCheck = [System Health Index]
+RETURN
+    SWITCH (
+        TRUE (),
+        valueToCheck >= 85, "Excellent",
+        valueToCheck >= 72, "Stable",
+        valueToCheck >= 60, "Watch",
+        "Critical"
+    )

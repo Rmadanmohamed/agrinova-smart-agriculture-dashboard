@@ -1,0 +1,15 @@
+{
+  "repo": "agrinova-smart-agriculture-dashboard",
+  "title": "AgriNova Smart Agriculture Dashboard",
+  "category": "Agriculture-AI-Projects",
+  "description": "A full smart-agriculture dashboard workspace combining a Next.js dashboard, API routes, Power BI assets, and Power BI-ready CSV data.",
+  "topics": [
+    "agriculture",
+    "nextjs",
+    "react",
+    "typescript",
+    "powerbi",
+    "dashboard",
+    "iot"
+  ]
+}

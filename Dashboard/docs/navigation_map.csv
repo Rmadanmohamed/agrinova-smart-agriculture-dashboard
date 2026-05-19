@@ -1,0 +1,11 @@
+Order,ButtonLabel,TargetPage,IconFile,ActiveIndicator,ActionType
+1,Overview,AgriNova Overview,assets/icons/overview.svg,Show neon-green vertical pill only on this target page,Page navigation
+2,Smart Farm Monitoring,Smart Farm Monitoring,assets/icons/farm_monitoring.svg,Show neon-green vertical pill only on this target page,Page navigation
+3,Crop Health,Crop Health & Vision Intelligence,assets/icons/crop_health.svg,Show neon-green vertical pill only on this target page,Page navigation
+4,Robotics & Drone,Robotics & Drone Operations,assets/icons/robot.svg,Show neon-green vertical pill only on this target page,Page navigation
+5,IoT Sensor Network,IoT Sensor Network,assets/icons/iot.svg,Show neon-green vertical pill only on this target page,Page navigation
+6,Price Prediction,Price Prediction,assets/icons/price.svg,Show neon-green vertical pill only on this target page,Page navigation
+7,Blockchain Security,Blockchain Security,assets/icons/blockchain.svg,Show neon-green vertical pill only on this target page,Page navigation
+8,AI Assistant,AI Assistant,assets/icons/assistant.svg,Show neon-green vertical pill only on this target page,Page navigation
+9,Sustainability & Energy,Sustainability & Energy,assets/icons/energy.svg,Show neon-green vertical pill only on this target page,Page navigation
+10,Alerts & Reports,Alerts & Reports,assets/icons/alerts.svg,Show neon-green vertical pill only on this target page,Page navigation

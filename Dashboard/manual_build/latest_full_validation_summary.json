@@ -1,0 +1,65 @@
+{
+  "table_names": [
+    "Farms",
+    "Crops",
+    "Sensors",
+    "SoilReadings",
+    "WeatherReadings",
+    "RobotMissions",
+    "DroneMissions",
+    "CropHealthScans",
+    "PricePredictions",
+    "BlockchainTransactions",
+    "AIRecommendations",
+    "Alerts",
+    "EnergyUsage",
+    "Reports",
+    "Date",
+    "AgriNova_Measures"
+  ],
+  "relationship_count_total": 25,
+  "relationship_count_active": 22,
+  "relationship_count_inactive": 3,
+  "json_file_count": 541,
+  "visual_file_count": 478,
+  "main_overlay_object_count": 366,
+  "backgrounds": [
+    "01_AgriNova_Overview.png",
+    "02_Smart_Farm_Monitoring.png",
+    "03_Crop_Health_and_Vision_Intelligence.png",
+    "04_Robotics_and_Drone_Operations.png",
+    "05_IoT_Sensor_Network.png",
+    "06_Price_Prediction.png",
+    "07_Blockchain_Security.png",
+    "08_AI_Assistant.png",
+    "09_Sustainability_and_Energy.png",
+    "10_Alerts_and_Reports.png"
+  ],
+  "page_count": 30,
+  "main_pages_present": 10,
+  "price_crops": [
+    "Apple",
+    "Banana",
+    "Bell Pepper",
+    "Cucumber",
+    "Grapes",
+    "Lemon",
+    "Mandarin",
+    "Mango",
+    "Onion",
+    "Orange",
+    "Pomegranate",
+    "Potato",
+    "Strawberry",
+    "Tomatoes"
+  ],
+  "errors": [
+    "Main-page overlay object count expected 183, found 366"
+  ],
+  "warnings": [
+    "Pages with zero visuals: pages"
+  ],
+  "active_directed_ambiguities": [],
+  "model_table_agri_measures_present": true,
+  "model_table_measures_present": false
+}

@@ -1,0 +1,25 @@
+CropID,FarmID,CropName,CropCategory,GrowthStage,Season,PlantedAreaHa,TargetMarket,Status
+C001,F001,Mango,Fruit,Seedling,Spring,10.4,Export Packhouse,Attention
+C002,F001,Orange,Fruit,Harvest Ready,Winter,7.4,Processing Buyer,Online
+C003,F001,Bell Pepper,Vegetable,Vegetative,Summer,5.9,Retail Chain,Online
+C004,F001,Strawberry,Fruit,Flowering,Spring,9.2,Processing Buyer,Standby
+C005,F002,Mandarin,Fruit,Seedling,Winter,5.9,Processing Buyer,Online
+C006,F002,Orange,Fruit,Vegetative,Winter,9.6,Export Packhouse,Attention
+C007,F002,Tomatoes,Vegetable,Seedling,Summer,15.3,Processing Buyer,Online
+C008,F002,Pomegranate,Fruit,Flowering,Spring,12.5,Retail Chain,Attention
+C009,F003,Tomatoes,Vegetable,Flowering,Winter,18.4,Processing Buyer,Online
+C010,F003,Potato,Vegetable,Fruiting,Year-round,9.0,Export Packhouse,Online
+C011,F003,Lemon,Fruit,Vegetative,Spring,4.6,Export Packhouse,Online
+C012,F003,Grapes,Fruit,Vegetative,Year-round,12.7,Local Wholesale,Online
+C013,F004,Strawberry,Fruit,Fruiting,Winter,7.3,Export Packhouse,Attention
+C014,F004,Cucumber,Vegetable,Vegetative,Summer,11.0,Export Packhouse,Attention
+C015,F004,Potato,Vegetable,Seedling,Spring,10.1,Retail Chain,Online
+C016,F004,Orange,Fruit,Seedling,Summer,7.9,Local Wholesale,Online
+C017,F005,Mandarin,Fruit,Fruiting,Summer,17.1,Processing Buyer,Online
+C018,F005,Mango,Fruit,Flowering,Year-round,10.7,Local Wholesale,Online
+C019,F005,Pomegranate,Fruit,Flowering,Year-round,8.0,Export Packhouse,Attention
+C020,F005,Apple,Fruit,Fruiting,Winter,18.1,Processing Buyer,Attention
+C021,F006,Mandarin,Fruit,Seedling,Spring,6.3,Retail Chain,Online
+C022,F006,Orange,Fruit,Fruiting,Spring,15.3,Processing Buyer,Online
+C023,F006,Potato,Vegetable,Harvest Ready,Summer,3.8,Processing Buyer,Standby
+C024,F006,Lemon,Fruit,Vegetative,Spring,3.8,Local Wholesale,Online

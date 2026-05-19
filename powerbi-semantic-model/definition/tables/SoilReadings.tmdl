@@ -1,0 +1,142 @@
+table SoilReadings
+	lineageTag: 0d90297d-2801-5195-ac48-dc9df9fa5d6d
+
+	column ReadingID
+		dataType: string
+		lineageTag: a603ce75-a990-4225-a496-3b1d94ed6553
+		summarizeBy: none
+		sourceColumn: ReadingID
+
+	column SensorID
+		dataType: string
+		lineageTag: c3379c29-38cf-4d07-a653-e8de662160e6
+		summarizeBy: none
+		sourceColumn: SensorID
+
+	column FarmID
+		dataType: string
+		lineageTag: 023b1f11-2386-4c21-aba0-10884d0375a4
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column CropID
+		dataType: string
+		lineageTag: 28916fd2-ca47-4d80-9893-65b1b48f206d
+		summarizeBy: none
+		sourceColumn: CropID
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 2a704108-29fb-4345-b889-f5a45109d90a
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time
+		dataType: string
+		lineageTag: 7721b0cb-b3b9-459f-934a-bfe0f2de613e
+		summarizeBy: none
+		sourceColumn: Time
+
+	column SoilMoisturePct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 8b0337ad-5884-4dd2-9d3e-9e57b4cf1eef
+		summarizeBy: sum
+		sourceColumn: SoilMoisturePct
+
+	column SoilTempC
+		dataType: double
+		formatString: 0.00
+		lineageTag: da998ac7-1b29-410d-beb2-37ecee43b019
+		summarizeBy: sum
+		sourceColumn: SoilTempC
+
+	column HumidityPct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 880fb66e-7e5f-4b36-b8bd-d5d4f91ada65
+		summarizeBy: sum
+		sourceColumn: HumidityPct
+
+	column PH
+		dataType: double
+		formatString: 0.00
+		lineageTag: 9fd37db9-92de-438d-a95d-572de02ab0cd
+		summarizeBy: sum
+		sourceColumn: PH
+
+	column NitrogenPPM
+		dataType: double
+		formatString: 0.00
+		lineageTag: 68d20b4c-5d97-4a89-85f0-1a421c9adbb3
+		summarizeBy: sum
+		sourceColumn: NitrogenPPM
+
+	column PhosphorusPPM
+		dataType: double
+		formatString: 0.00
+		lineageTag: 93b53110-56ad-4f74-8a3f-5f747dad9d87
+		summarizeBy: sum
+		sourceColumn: PhosphorusPPM
+
+	column PotassiumPPM
+		dataType: double
+		formatString: 0.00
+		lineageTag: 87f33fe2-001c-4577-bff2-8b097d770752
+		summarizeBy: sum
+		sourceColumn: PotassiumPPM
+
+	column LightLux
+		dataType: double
+		formatString: 0.00
+		lineageTag: 44cc7210-04ec-4e58-b6ac-d3745ec81165
+		summarizeBy: sum
+		sourceColumn: LightLux
+
+	column CO2PPM
+		dataType: double
+		formatString: 0.00
+		lineageTag: 676d3570-d88c-41d5-9c8a-6968b8ac1c88
+		summarizeBy: sum
+		sourceColumn: CO2PPM
+
+	column LeafWetnessPct
+		dataType: double
+		formatString: 0.00
+		lineageTag: ff22dc66-a6e5-46a7-9a7b-6df64219d798
+		summarizeBy: sum
+		sourceColumn: LeafWetnessPct
+
+	column IrrigationStatus
+		dataType: string
+		lineageTag: 84a2ba73-d153-4d2a-acdf-31503afe1716
+		summarizeBy: none
+		sourceColumn: IrrigationStatus
+
+	column FertilizationStatus
+		dataType: string
+		lineageTag: 4b47fcb2-40eb-4f95-b243-a25b4ef99d65
+		summarizeBy: none
+		sourceColumn: FertilizationStatus
+
+	column Status
+		dataType: string
+		lineageTag: c5aaf14d-a246-4329-a3ec-e8fdcc91373e
+		summarizeBy: none
+		sourceColumn: Status
+
+	partition SoilReadings-63b4b625-8c00-5838-8996-568c2d6c9dae = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\SoilReadings.csv"), [Delimiter=",", Columns=19, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"ReadingID", type text}, {"SensorID", type text}, {"FarmID", type text}, {"CropID", type text}, {"Date", type date}, {"Time", type text}, {"SoilMoisturePct", type number}, {"SoilTempC", type number}, {"HumidityPct", type number}, {"PH", type number}, {"NitrogenPPM", type number}, {"PhosphorusPPM", type number}, {"PotassiumPPM", type number}, {"LightLux", type number}, {"CO2PPM", type number}, {"LeafWetnessPct", type number}, {"IrrigationStatus", type text}, {"FertilizationStatus", type text}, {"Status", type text}}, "en-US")
+				in
+				    #"Changed Type"
+

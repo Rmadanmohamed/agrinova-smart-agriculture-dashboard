@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="a" cx="18%" cy="12%" r="70%"><stop offset="0%" stop-color="#0D4F45" stop-opacity=".55"/><stop offset="100%" stop-color="#020B18" stop-opacity="0"/></radialGradient>
+    <radialGradient id="b" cx="82%" cy="20%" r="65%"><stop offset="0%" stop-color="#004E78" stop-opacity=".5"/><stop offset="100%" stop-color="#020B18" stop-opacity="0"/></radialGradient>
+    <linearGradient id="line" x1="0" x2="1"><stop offset="0" stop-color="#3DF27A" stop-opacity="0"/><stop offset=".5" stop-color="#00D4FF" stop-opacity=".45"/><stop offset="1" stop-color="#3DF27A" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="#020B18"/>
+  <rect width="1920" height="1080" fill="url(#a)"/>
+  <rect width="1920" height="1080" fill="url(#b)"/>
+  <g opacity=".16" stroke="#1C4664" stroke-width="1">
+    <path d="M0 80h1920M0 160h1920M0 240h1920M0 320h1920M0 400h1920M0 480h1920M0 560h1920M0 640h1920M0 720h1920M0 800h1920M0 880h1920M0 960h1920"/>
+    <path d="M80 0v1080M160 0v1080M240 0v1080M320 0v1080M400 0v1080M480 0v1080M560 0v1080M640 0v1080M720 0v1080M800 0v1080M880 0v1080M960 0v1080M1040 0v1080M1120 0v1080M1200 0v1080M1280 0v1080M1360 0v1080M1440 0v1080M1520 0v1080M1600 0v1080M1680 0v1080M1760 0v1080M1840 0v1080"/>
+  </g>
+  <rect x="300" y="96" width="1450" height="2" fill="url(#line)"/>
+</svg>

@@ -1,0 +1,86 @@
+AlertID,FarmID,AlertDate,AlertType,PriorityLevel,AlertMessage,RecommendedAction,ResolutionStatus,Status,LastSignalTime,HeartbeatState
+AL00001,F005,2026-05-11,Market Price,Low,Market Price signal requires low priority review,Prepare market response plan,In Progress,Online,2026-05-18T16:51,Live
+AL00002,F003,2026-05-02,Market Price,Low,Market Price signal requires low priority review,Verify transaction timeline,In Progress,Online,2026-05-18T17:45,Live
+AL00003,F002,2026-05-11,Energy,Critical,Energy signal requires critical priority review,Move device to maintenance queue,Open,Attention,2026-05-18T18:08,Live
+AL00004,F004,2026-05-05,Critical Soil,Medium,Critical Soil signal requires medium priority review,Prepare market response plan,In Progress,Online,2026-05-18T17:36,Live
+AL00005,F004,2026-05-08,Market Price,High,Market Price signal requires high priority review,Prepare market response plan,Resolved,Attention,2026-05-18T18:34,Live
+AL00006,F005,2026-05-09,Critical Soil,Medium,Critical Soil signal requires medium priority review,Prepare market response plan,In Progress,Online,2026-05-18T15:20,Live
+AL00007,F006,2026-05-14,Weather Risk,High,Weather Risk signal requires high priority review,Prepare market response plan,Open,Attention,2026-05-18T15:11,Live
+AL00008,F003,2026-05-04,Irrigation,High,Irrigation signal requires high priority review,Prepare market response plan,Open,Attention,2026-05-18T15:57,Live
+AL00009,F005,2026-05-16,Critical Soil,Medium,Critical Soil signal requires medium priority review,Prepare market response plan,Open,Online,2026-05-18T16:46,Live
+AL00010,F005,2026-05-02,Irrigation,High,Irrigation signal requires high priority review,Adjust irrigation schedule,Resolved,Attention,2026-05-18T15:56,Live
+AL00011,F002,2026-05-11,Energy,Medium,Energy signal requires medium priority review,Adjust irrigation schedule,Open,Online,2026-05-18T15:36,Live
+AL00012,F006,2026-05-03,Energy,Medium,Energy signal requires medium priority review,Adjust irrigation schedule,Open,Online,2026-05-18T17:43,Live
+AL00013,F002,2026-05-14,Weather Risk,High,Weather Risk signal requires high priority review,Adjust irrigation schedule,Open,Attention,2026-05-18T17:17,Live
+AL00014,F006,2026-05-11,Weather Risk,High,Weather Risk signal requires high priority review,Review crop scan results,Open,Attention,2026-05-18T16:54,Live
+AL00015,F003,2026-04-30,Energy,Low,Energy signal requires low priority review,Review crop scan results,Open,Online,2026-05-18T16:20,Live
+AL00016,F002,2026-05-12,Market Price,Medium,Market Price signal requires medium priority review,Adjust irrigation schedule,In Progress,Online,2026-05-18T15:38,Live
+AL00017,F004,2026-05-05,Market Price,High,Market Price signal requires high priority review,Dispatch field inspection,Resolved,Attention,2026-05-18T18:48,Live
+AL00018,F004,2026-05-15,Irrigation,High,Irrigation signal requires high priority review,Move device to maintenance queue,Open,Attention,2026-05-18T17:42,Live
+AL00019,F002,2026-05-16,Irrigation,Medium,Irrigation signal requires medium priority review,Verify transaction timeline,Open,Online,2026-05-18T15:20,Live
+AL00020,F001,2026-05-01,Weather Risk,Medium,Weather Risk signal requires medium priority review,Review crop scan results,Open,Online,2026-05-18T17:21,Live
+AL00021,F004,2026-05-04,Blockchain Validation,Low,Blockchain Validation signal requires low priority review,Prepare market response plan,In Progress,Online,2026-05-18T18:31,Live
+AL00022,F003,2026-05-08,Energy,High,Energy signal requires high priority review,Adjust irrigation schedule,In Progress,Attention,2026-05-18T16:50,Live
+AL00023,F001,2026-05-18,Blockchain Validation,High,Blockchain Validation signal requires high priority review,Adjust irrigation schedule,Resolved,Attention,2026-05-18T17:41,Live
+AL00024,F006,2026-05-04,Critical Soil,Medium,Critical Soil signal requires medium priority review,Dispatch field inspection,Open,Online,2026-05-18T18:03,Live
+AL00025,F006,2026-05-15,Irrigation,Medium,Irrigation signal requires medium priority review,Review crop scan results,Open,Online,2026-05-18T18:03,Live
+AL00026,F006,2026-05-12,Energy,High,Energy signal requires high priority review,Adjust irrigation schedule,Resolved,Attention,2026-05-18T16:37,Live
+AL00027,F002,2026-05-10,Irrigation,Critical,Irrigation signal requires critical priority review,Review crop scan results,Resolved,Attention,2026-05-18T18:24,Live
+AL00028,F003,2026-05-08,Weather Risk,Medium,Weather Risk signal requires medium priority review,Adjust irrigation schedule,Open,Online,2026-05-18T15:58,Live
+AL00029,F005,2026-05-15,Weather Risk,Low,Weather Risk signal requires low priority review,Dispatch field inspection,Open,Online,2026-05-18T17:23,Live
+AL00030,F004,2026-05-15,Blockchain Validation,Medium,Blockchain Validation signal requires medium priority review,Move device to maintenance queue,Open,Online,2026-05-18T16:18,Live
+AL00031,F004,2026-05-12,Irrigation,Critical,Irrigation signal requires critical priority review,Adjust irrigation schedule,In Progress,Attention,2026-05-18T17:37,Live
+AL00032,F002,2026-05-15,Weather Risk,High,Weather Risk signal requires high priority review,Move device to maintenance queue,Open,Attention,2026-05-18T18:03,Live
+AL00033,F005,2026-05-18,Disease,Medium,Disease signal requires medium priority review,Adjust irrigation schedule,In Progress,Online,2026-05-18T15:55,Live
+AL00034,F004,2026-05-01,Market Price,Critical,Market Price signal requires critical priority review,Adjust irrigation schedule,Open,Attention,2026-05-18T15:28,Live
+AL00035,F003,2026-05-18,Irrigation,High,Irrigation signal requires high priority review,Move device to maintenance queue,Open,Attention,2026-05-18T18:31,Live
+AL00036,F001,2026-05-16,Weather Risk,Medium,Weather Risk signal requires medium priority review,Prepare market response plan,Open,Online,2026-05-18T16:54,Live
+AL00037,F005,2026-05-09,Market Price,High,Market Price signal requires high priority review,Prepare market response plan,Open,Attention,2026-05-18T15:28,Live
+AL00038,F003,2026-05-15,Disease,Medium,Disease signal requires medium priority review,Prepare market response plan,Resolved,Online,2026-05-18T16:49,Live
+AL00039,F003,2026-05-08,Market Price,Medium,Market Price signal requires medium priority review,Dispatch field inspection,Open,Online,2026-05-18T15:37,Live
+AL00040,F001,2026-05-06,Disease,High,Disease signal requires high priority review,Review crop scan results,Open,Attention,2026-05-18T16:19,Live
+AL00041,F004,2026-04-28,Critical Soil,Critical,Critical Soil signal requires critical priority review,Verify transaction timeline,In Progress,Attention,2026-05-18T16:18,Live
+AL00042,F003,2026-05-12,Energy,Critical,Energy signal requires critical priority review,Move device to maintenance queue,Open,Attention,2026-05-18T17:06,Live
+AL00043,F003,2026-05-06,Irrigation,Medium,Irrigation signal requires medium priority review,Prepare market response plan,Resolved,Online,2026-05-18T18:18,Live
+AL00044,F002,2026-05-04,Blockchain Validation,High,Blockchain Validation signal requires high priority review,Review crop scan results,Open,Attention,2026-05-18T17:45,Live
+AL00045,F004,2026-05-15,Market Price,Critical,Market Price signal requires critical priority review,Verify transaction timeline,Open,Attention,2026-05-18T17:10,Live
+AL00046,F006,2026-05-04,Critical Soil,Medium,Critical Soil signal requires medium priority review,Prepare market response plan,Resolved,Online,2026-05-18T17:22,Live
+AL00047,F004,2026-05-04,Disease,Low,Disease signal requires low priority review,Prepare market response plan,Resolved,Online,2026-05-18T17:43,Live
+AL00048,F005,2026-05-09,Disease,Medium,Disease signal requires medium priority review,Verify transaction timeline,Open,Online,2026-05-18T17:28,Live
+AL00049,F006,2026-05-08,Blockchain Validation,Medium,Blockchain Validation signal requires medium priority review,Verify transaction timeline,Open,Online,2026-05-18T16:30,Live
+AL00050,F001,2026-05-11,Energy,Medium,Energy signal requires medium priority review,Move device to maintenance queue,Resolved,Online,2026-05-18T17:21,Live
+AL00051,F001,2026-05-11,Market Price,Medium,Market Price signal requires medium priority review,Adjust irrigation schedule,Open,Online,2026-05-18T18:29,Live
+AL00052,F001,2026-05-12,Weather Risk,Medium,Weather Risk signal requires medium priority review,Move device to maintenance queue,Open,Online,2026-05-18T17:32,Live
+AL00053,F005,2026-05-09,Weather Risk,Low,Weather Risk signal requires low priority review,Verify transaction timeline,In Progress,Online,2026-05-18T17:25,Live
+AL00054,F004,2026-05-08,Blockchain Validation,High,Blockchain Validation signal requires high priority review,Prepare market response plan,Resolved,Attention,2026-05-18T18:10,Live
+AL00055,F004,2026-05-14,Critical Soil,High,Critical Soil signal requires high priority review,Adjust irrigation schedule,In Progress,Attention,2026-05-18T18:51,Live
+AL00056,F004,2026-05-16,Critical Soil,Medium,Critical Soil signal requires medium priority review,Dispatch field inspection,Resolved,Online,2026-05-18T15:43,Live
+AL00057,F001,2026-05-13,Irrigation,Low,Irrigation signal requires low priority review,Verify transaction timeline,Open,Online,2026-05-18T19:09,Live
+AL00058,F005,2026-05-07,Weather Risk,Low,Weather Risk signal requires low priority review,Dispatch field inspection,In Progress,Online,2026-05-18T17:59,Live
+AL00059,F001,2026-05-04,Blockchain Validation,Critical,Blockchain Validation signal requires critical priority review,Review crop scan results,Resolved,Attention,2026-05-18T16:09,Live
+AL00060,F002,2026-05-05,Critical Soil,High,Critical Soil signal requires high priority review,Review crop scan results,Resolved,Attention,2026-05-18T18:15,Live
+AL00061,F004,2026-05-07,Irrigation,Medium,Irrigation signal requires medium priority review,Dispatch field inspection,Resolved,Online,2026-05-18T18:16,Live
+AL00062,F003,2026-05-09,Irrigation,Medium,Irrigation signal requires medium priority review,Review crop scan results,Open,Online,2026-05-18T18:45,Live
+AL00063,F003,2026-05-08,Critical Soil,Medium,Critical Soil signal requires medium priority review,Verify transaction timeline,Open,Online,2026-05-18T17:42,Live
+AL00064,F006,2026-04-30,Irrigation,Critical,Irrigation signal requires critical priority review,Prepare market response plan,Open,Attention,2026-05-18T16:30,Live
+AL00065,F003,2026-05-03,Market Price,Medium,Market Price signal requires medium priority review,Move device to maintenance queue,Open,Online,2026-05-18T18:58,Live
+AL00066,F001,2026-05-15,Irrigation,High,Irrigation signal requires high priority review,Verify transaction timeline,Resolved,Attention,2026-05-18T18:30,Live
+AL00067,F003,2026-05-10,Disease,High,Disease signal requires high priority review,Move device to maintenance queue,In Progress,Attention,2026-05-18T15:38,Live
+AL00068,F005,2026-05-05,Blockchain Validation,High,Blockchain Validation signal requires high priority review,Review crop scan results,Open,Attention,2026-05-18T17:49,Live
+AL00069,F006,2026-04-30,Irrigation,Low,Irrigation signal requires low priority review,Prepare market response plan,In Progress,Online,2026-05-18T17:54,Live
+AL00070,F005,2026-05-13,Irrigation,Medium,Irrigation signal requires medium priority review,Move device to maintenance queue,Resolved,Online,2026-05-18T19:07,Live
+AL00071,F005,2026-05-15,Irrigation,Low,Irrigation signal requires low priority review,Prepare market response plan,Open,Online,2026-05-18T18:48,Live
+AL00072,F006,2026-05-16,Market Price,Medium,Market Price signal requires medium priority review,Move device to maintenance queue,Open,Online,2026-05-18T16:57,Live
+AL00073,F006,2026-05-10,Critical Soil,Medium,Critical Soil signal requires medium priority review,Move device to maintenance queue,Open,Online,2026-05-18T16:53,Live
+AL00074,F005,2026-05-03,Blockchain Validation,Medium,Blockchain Validation signal requires medium priority review,Adjust irrigation schedule,Open,Online,2026-05-18T17:20,Live
+AL00075,F004,2026-05-01,Energy,Critical,Energy signal requires critical priority review,Review crop scan results,Open,Attention,2026-05-18T15:27,Live
+AL00076,F006,2026-05-17,Blockchain Validation,Critical,Blockchain Validation signal requires critical priority review,Verify transaction timeline,Open,Attention,2026-05-18T17:34,Live
+AL00077,F005,2026-04-28,Irrigation,High,Irrigation signal requires high priority review,Verify transaction timeline,Resolved,Attention,2026-05-18T17:43,Live
+AL00078,F005,2026-04-28,Disease,High,Disease signal requires high priority review,Adjust irrigation schedule,Resolved,Attention,2026-05-18T18:31,Live
+AL00079,F004,2026-05-17,Disease,Low,Disease signal requires low priority review,Verify transaction timeline,Resolved,Online,2026-05-18T17:03,Live
+AL00080,F003,2026-05-17,Energy,Medium,Energy signal requires medium priority review,Dispatch field inspection,Open,Online,2026-05-18T15:16,Live
+AL00081,F002,2026-04-28,Disease,Medium,Disease signal requires medium priority review,Prepare market response plan,Open,Online,2026-05-18T18:57,Live
+AL00082,F004,2026-04-30,Weather Risk,Critical,Weather Risk signal requires critical priority review,Adjust irrigation schedule,Open,Attention,2026-05-18T18:32,Live
+AL00083,F004,2026-05-12,Weather Risk,Medium,Weather Risk signal requires medium priority review,Verify transaction timeline,In Progress,Online,2026-05-18T15:11,Live
+AL00084,F006,2026-05-01,Energy,High,Energy signal requires high priority review,Verify transaction timeline,Open,Attention,2026-05-18T15:27,Live
+AL00085,F005,2026-05-17,Market Price,Medium,Market Price signal requires medium priority review,Prepare market response plan,In Progress,Online,2026-05-18T16:34,Live

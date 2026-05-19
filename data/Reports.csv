@@ -1,0 +1,7 @@
+ReportID,ReportName,ReportCategory,GeneratedDate,ExportFormat,Owner,RefreshStatus,DecisionSupportSummary,Status,LastSignalTime,HeartbeatState
+RP001,Farm Performance Summary,Farm Performance,2026-05-17,PDF,AgriNova Operations,Ready,Priority crop zones require closer inspection this week.,Online,2026-05-18T17:15,Live
+RP002,Crop Health Report,Crop Health,2026-05-16,PDF,AgriNova Operations,Ready,Priority crop zones require closer inspection this week.,Online,2026-05-18T18:50,Live
+RP003,Water Usage Report,Water Usage,2026-05-15,PDF,AgriNova Operations,Ready,Market timing supports staged harvest decisions.,Online,2026-05-18T18:12,Live
+RP004,Market Forecast Report,Market Forecast,2026-05-14,PDF,AgriNova Operations,Ready,Resource efficiency remains strong across monitored farms.,Online,2026-05-18T18:40,Live
+RP005,Blockchain Audit Report,Blockchain Audit,2026-05-13,PDF,AgriNova Operations,Ready,Resource efficiency remains strong across monitored farms.,Online,2026-05-18T18:44,Live
+RP006,AI Recommendation Report,AI Recommendation,2026-05-12,PDF,AgriNova Operations,Ready,Market timing supports staged harvest decisions.,Online,2026-05-18T18:05,Live

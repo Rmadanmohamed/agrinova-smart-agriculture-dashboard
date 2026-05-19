@@ -1,0 +1,34 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation AgriNovaBuild = Enterprise smart agriculture Power BI project scaffold
+
+annotation PBI_QueryOrder = ["Farms","Crops","Sensors","SoilReadings","WeatherReadings","RobotMissions","DroneMissions","CropHealthScans","PricePredictions","BlockchainTransactions","AIRecommendations","Alerts","EnergyUsage","Reports","Date","AgriNova_Measures"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Farms
+ref table Crops
+ref table Sensors
+ref table SoilReadings
+ref table WeatherReadings
+ref table RobotMissions
+ref table DroneMissions
+ref table CropHealthScans
+ref table PricePredictions
+ref table BlockchainTransactions
+ref table AIRecommendations
+ref table Alerts
+ref table EnergyUsage
+ref table Reports
+ref table Date
+ref table AgriNova_Measures
+

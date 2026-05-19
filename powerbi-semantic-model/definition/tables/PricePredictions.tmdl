@@ -1,0 +1,134 @@
+table PricePredictions
+	lineageTag: cbd2704d-b138-572b-ba2c-a9d75c826426
+
+	column PricePredictionID
+		dataType: string
+		lineageTag: 4ca9fc42-06b4-46fb-bf78-fb0bb98a5f2b
+		summarizeBy: none
+		sourceColumn: PricePredictionID
+
+	column CropName
+		dataType: string
+		lineageTag: a985a53d-5bce-41f6-9528-fb9f79735291
+		summarizeBy: none
+		sourceColumn: CropName
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 8f12c3cf-1e82-403a-acff-a4aa2bfd7216
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column HorizonDays
+		dataType: int64
+		formatString: 0
+		lineageTag: 1db14b49-f8eb-4bfa-9833-78e0621676c2
+		summarizeBy: sum
+		sourceColumn: HorizonDays
+
+	column CurrentMarketPriceEGP
+		dataType: double
+		formatString: 0.00
+		lineageTag: 633e591f-ebdc-408d-96e7-3ec1f6455a60
+		summarizeBy: sum
+		sourceColumn: CurrentMarketPriceEGP
+
+	column PredictedPrice60DaysEGP
+		dataType: double
+		formatString: 0.00
+		lineageTag: 7c0e7714-ee02-428c-857d-86c68076cdce
+		summarizeBy: sum
+		sourceColumn: PredictedPrice60DaysEGP
+
+	column ExpectedTrend
+		dataType: string
+		lineageTag: 493471c6-4dcf-47f9-bbe3-07a17ae81171
+		summarizeBy: none
+		sourceColumn: ExpectedTrend
+
+	column VolatilityLevel
+		dataType: string
+		lineageTag: 61115176-0483-4eaa-8813-b02793489b70
+		summarizeBy: none
+		sourceColumn: VolatilityLevel
+
+	column ProfitabilityIndicator
+		dataType: string
+		lineageTag: 14dd6850-494f-48ad-b8ac-d65fb70d9a66
+		summarizeBy: none
+		sourceColumn: ProfitabilityIndicator
+
+	column MarketRisk
+		dataType: string
+		lineageTag: 54500ec1-5649-4cb0-8678-2814e71d9029
+		summarizeBy: none
+		sourceColumn: MarketRisk
+
+	column SupplyDemandImpact
+		dataType: double
+		formatString: 0.00
+		lineageTag: 3322cc0f-44be-4780-9b38-28fd728ebe5b
+		summarizeBy: sum
+		sourceColumn: SupplyDemandImpact
+
+	column USDEGPImpact
+		dataType: double
+		formatString: 0.00
+		lineageTag: 4fb304d1-841d-4c44-bb49-0d9e559cc692
+		summarizeBy: sum
+		sourceColumn: USDEGPImpact
+
+	column InflationImpact
+		dataType: double
+		formatString: 0.00
+		lineageTag: 1be3aedf-ade1-4966-abf9-deb6fc0a678c
+		summarizeBy: sum
+		sourceColumn: InflationImpact
+
+	column SeasonalEffect
+		dataType: double
+		formatString: 0.00
+		lineageTag: f5d70f7d-c36f-4739-a64a-065b3ba69a3d
+		summarizeBy: sum
+		sourceColumn: SeasonalEffect
+
+	column SmartRecommendation
+		dataType: string
+		lineageTag: b8ff8147-1085-472f-9e0b-80bc49ef16b3
+		summarizeBy: none
+		sourceColumn: SmartRecommendation
+
+	column Status
+		dataType: string
+		lineageTag: 0044cb9c-d09e-4782-8c4c-6ffaee6be860
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: e8c4c5af-f5db-4268-88da-ea721ef8434a
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: 4dfdc5cd-2d7b-49b5-a482-ead41d157dad
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	partition PricePredictions-dd58d473-313a-5a85-8361-21ef71f1ce92 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\PricePredictions.csv"), [Delimiter=",", Columns=18, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"PricePredictionID", type text}, {"CropName", type text}, {"Date", type date}, {"HorizonDays", Int64.Type}, {"CurrentMarketPriceEGP", type number}, {"PredictedPrice60DaysEGP", type number}, {"ExpectedTrend", type text}, {"VolatilityLevel", type text}, {"ProfitabilityIndicator", type text}, {"MarketRisk", type text}, {"SupplyDemandImpact", type number}, {"USDEGPImpact", type number}, {"InflationImpact", type number}, {"SeasonalEffect", type number}, {"SmartRecommendation", type text}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}}, "en-US")
+				in
+				    #"Changed Type"
+

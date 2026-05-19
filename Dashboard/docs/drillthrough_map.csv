@@ -1,0 +1,10 @@
+DrillThroughPage,DrillField,MainContent
+DT_FarmProfile,Farms[FarmID],"Farm details, map, crop mix, sensors, energy"
+DT_CropAnalytics,Crops[CropID],"Crop health, soil trends, scans, market view"
+DT_SensorDetail,Sensors[SensorID],"Reading history, packet rate, communication health"
+DT_RobotMission,RobotMissions[RobotMissionID],"Battery, route, scanning progress, obstacles"
+DT_DroneMission,DroneMissions[DroneMissionID],"Coverage, NDVI, thermal zones, capture state"
+DT_CropScan,CropHealthScans[ScanID],"Diagnosis result, treatment, preventive action"
+DT_PriceCommodity,PricePredictions[CropName],"Current price, 60-day prediction, impacts"
+DT_BlockchainTransaction,BlockchainTransactions[TransactionID],"Block detail, hash previews, validation timeline"
+DT_AlertDetail,Alerts[AlertID],"Alert priority, action, status, related farm"

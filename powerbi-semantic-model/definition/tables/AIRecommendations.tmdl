@@ -1,0 +1,91 @@
+table AIRecommendations
+	lineageTag: c680391b-a8cb-560d-b24f-04efb880faa1
+
+	column RecommendationID
+		dataType: string
+		lineageTag: 90eb2f63-2985-494a-b3ef-9c8b6f2cdecd
+		summarizeBy: none
+		sourceColumn: RecommendationID
+
+	column FarmID
+		dataType: string
+		lineageTag: 15256ee7-2e92-4361-aa5b-2146fbbe830e
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column CropID
+		dataType: string
+		lineageTag: 56d41087-52af-470a-8137-0026a93c9e22
+		summarizeBy: none
+		sourceColumn: CropID
+
+	column RecommendationDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 9ccac558-4252-495a-b811-6363797b03d8
+		summarizeBy: none
+		sourceColumn: RecommendationDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssistantModule
+		dataType: string
+		lineageTag: 23ca6393-a446-4691-bf27-7b98e6e950a2
+		summarizeBy: none
+		sourceColumn: AssistantModule
+
+	column InteractionType
+		dataType: string
+		lineageTag: eab59ef8-91a9-447f-8bf6-29c6ee7c9fbd
+		summarizeBy: none
+		sourceColumn: InteractionType
+
+	column FarmerQuestion
+		dataType: string
+		lineageTag: 08f9e8fd-c5a6-45b3-bcb4-0e3f1e68024e
+		summarizeBy: none
+		sourceColumn: FarmerQuestion
+
+	column RecommendationText
+		dataType: string
+		lineageTag: d13b4c50-e7ef-49aa-96ea-96e248733678
+		summarizeBy: none
+		sourceColumn: RecommendationText
+
+	column AssistantAvailability
+		dataType: string
+		lineageTag: 2d9b8038-416b-4868-86ee-a22b25fe7210
+		summarizeBy: none
+		sourceColumn: AssistantAvailability
+
+	column Status
+		dataType: string
+		lineageTag: cee55ecb-0d45-4071-8b3d-3bf76ac0b501
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 182e281c-e540-4169-ba6c-a32b7700c3e4
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: 20374930-b61c-45a4-8ab8-29b10cb12dae
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	partition AIRecommendations-7cdeba53-dbeb-5025-841f-b5a0c740ddd0 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\AIRecommendations.csv"), [Delimiter=",", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"RecommendationID", type text}, {"FarmID", type text}, {"CropID", type text}, {"RecommendationDate", type date}, {"AssistantModule", type text}, {"InteractionType", type text}, {"FarmerQuestion", type text}, {"RecommendationText", type text}, {"AssistantAvailability", type text}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}}, "en-US")
+				in
+				    #"Changed Type"
+

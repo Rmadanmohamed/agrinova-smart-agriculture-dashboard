@@ -1,0 +1,107 @@
+table EnergyUsage
+	lineageTag: 8a4cc217-f6c3-51e5-8822-72e98ce810b1
+
+	column EnergyID
+		dataType: string
+		lineageTag: 480c1b6c-b264-4e63-9cef-a20c9a7ee144
+		summarizeBy: none
+		sourceColumn: EnergyID
+
+	column FarmID
+		dataType: string
+		lineageTag: 3e280e6a-5ee2-432c-810c-6d5ceeab9829
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 4e117832-284f-4a1c-b4b1-c93d456f49cd
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column SolarPowerStatus
+		dataType: string
+		lineageTag: 889eaa3f-a078-4d27-ba02-5a1c8fa639c9
+		summarizeBy: none
+		sourceColumn: SolarPowerStatus
+
+	column BatteryLevelPct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 3fecd3d7-67e7-4425-83d0-1ca460ff9c09
+		summarizeBy: sum
+		sourceColumn: BatteryLevelPct
+
+	column RenewableEnergyUsagePct
+		dataType: double
+		formatString: 0.00
+		lineageTag: fa4d2405-7ba7-437b-8a5c-b452bfcd2707
+		summarizeBy: sum
+		sourceColumn: RenewableEnergyUsagePct
+
+	column CarbonReductionKg
+		dataType: double
+		formatString: 0.00
+		lineageTag: 66ef0099-252d-479e-a448-49258d31371c
+		summarizeBy: sum
+		sourceColumn: CarbonReductionKg
+
+	column OffGridOperationStatus
+		dataType: string
+		lineageTag: 2f2e1a7e-5474-4784-9752-be1192b450fe
+		summarizeBy: none
+		sourceColumn: OffGridOperationStatus
+
+	column EnergyConsumptionKwh
+		dataType: double
+		formatString: 0.00
+		lineageTag: 66ae37c9-0bb3-43c9-83a0-f792d9199027
+		summarizeBy: sum
+		sourceColumn: EnergyConsumptionKwh
+
+	column RobotChargingStatus
+		dataType: string
+		lineageTag: fc73d4ca-ac0a-4685-b6f9-07b69ac0e889
+		summarizeBy: none
+		sourceColumn: RobotChargingStatus
+
+	column DroneChargingStatus
+		dataType: string
+		lineageTag: 744201e0-82f3-4bde-a634-e16f1e76b696
+		summarizeBy: none
+		sourceColumn: DroneChargingStatus
+
+	column Status
+		dataType: string
+		lineageTag: a355b4f8-af12-4b6e-bbb0-371a6d3b1d10
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 5220da1d-2bef-4dc0-b5a9-c14e6f082cb3
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: 2bc80254-65cb-4164-b140-e48b3a2576e6
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	partition EnergyUsage-eed08408-8a3c-566c-be8d-b8ae93fdf64d = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\EnergyUsage.csv"), [Delimiter=",", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"EnergyID", type text}, {"FarmID", type text}, {"Date", type date}, {"SolarPowerStatus", type text}, {"BatteryLevelPct", type number}, {"RenewableEnergyUsagePct", type number}, {"CarbonReductionKg", type number}, {"OffGridOperationStatus", type text}, {"EnergyConsumptionKwh", type number}, {"RobotChargingStatus", type text}, {"DroneChargingStatus", type text}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}}, "en-US")
+				in
+				    #"Changed Type"
+

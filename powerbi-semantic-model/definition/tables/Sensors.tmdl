@@ -1,0 +1,87 @@
+table Sensors
+	lineageTag: 0a647512-f6c3-5921-accd-357bc026d572
+
+	column SensorID
+		dataType: string
+		lineageTag: 453a176d-88d6-4f05-a81d-2186f2a36325
+		summarizeBy: none
+		sourceColumn: SensorID
+
+	column FarmID
+		dataType: string
+		lineageTag: df4d21a0-8b31-40ba-9a40-0608a915c71f
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column Zone
+		dataType: string
+		lineageTag: 78d21399-31ed-49cf-8362-b660d63bdf88
+		summarizeBy: none
+		sourceColumn: Zone
+
+	column SensorType
+		dataType: string
+		lineageTag: 8ed03bd7-0be1-47f4-82fb-14281d4d6ed0
+		summarizeBy: none
+		sourceColumn: SensorType
+
+	column InstallDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: f9cf4007-2b70-4729-9094-4512b3827ac3
+		summarizeBy: none
+		sourceColumn: InstallDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 1656e06d-6688-4725-aa94-55fa3e4d7f3f
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: ed82466e-0d11-4932-95a5-e40369cf2d0c
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: a66342f7-8dfa-4270-9ecb-4166ba70abfd
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	column PacketRate
+		dataType: double
+		formatString: 0.00
+		lineageTag: 14cf2723-6d79-495c-9682-d0210141a061
+		summarizeBy: sum
+		sourceColumn: PacketRate
+
+	column CommunicationHealth
+		dataType: double
+		formatString: 0.00
+		lineageTag: bf4f9df0-9836-4ad0-acab-c0c7caf7f5bd
+		summarizeBy: sum
+		sourceColumn: CommunicationHealth
+
+	column EdgeGateway
+		dataType: string
+		lineageTag: 47018f35-6b8f-4465-8723-d7bc2a263e34
+		summarizeBy: none
+		sourceColumn: EdgeGateway
+
+	partition Sensors-114d7457-c8c5-5130-8387-2078ef7f9d8a = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\Sensors.csv"), [Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"SensorID", type text}, {"FarmID", type text}, {"Zone", type text}, {"SensorType", type text}, {"InstallDate", type date}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}, {"PacketRate", type number}, {"CommunicationHealth", type number}, {"EdgeGateway", type text}}, "en-US")
+				in
+				    #"Changed Type"
+

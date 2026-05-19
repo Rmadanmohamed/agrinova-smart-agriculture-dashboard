@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="Crop Health">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.36"/>
+      <stop offset="100%" stop-color="#020B18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="96" height="96" rx="22" fill="#071524"/>
+  <rect x="1" y="1" width="94" height="94" rx="21" fill="url(#g)" stroke="#00D4FF" stroke-opacity="0.42"/>
+  <g fill="none" stroke="#00D4FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <path d="M48 76c-18-10-28-24-28-40 13-2 22-8 28-16 6 8 15 14 28 16 0 16-10 30-28 40z"/><path d="M34 48l9 9 20-22"/>
+  </g>
+</svg>

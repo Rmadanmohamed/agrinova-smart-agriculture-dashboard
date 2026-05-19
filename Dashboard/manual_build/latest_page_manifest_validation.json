@@ -1,0 +1,20 @@
+{
+  "manifest_pages": [
+    "Page_AgriNova_Overview",
+    "Page_Smart_Farm_Monitoring",
+    "Page_Crop_Health_Vision_Intelligence",
+    "Page_Robotics_Drone_Operations",
+    "Page_IoT_Sensor_Network",
+    "Page_Price_Prediction",
+    "Page_Blockchain_Security",
+    "Page_AI_Assistant",
+    "Page_Sustainability_Energy",
+    "Page_Alerts_Reports"
+  ],
+  "visible_main_pages": 10,
+  "main_visual_objects": 183,
+  "visual_total": 239,
+  "background_resources": 10,
+  "target_errors": 0,
+  "errors": []
+}

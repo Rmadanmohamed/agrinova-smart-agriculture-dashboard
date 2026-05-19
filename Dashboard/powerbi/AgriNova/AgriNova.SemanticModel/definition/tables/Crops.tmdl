@@ -1,0 +1,68 @@
+table Crops
+	lineageTag: e2eea739-f6ff-5cbd-9b55-0300406f537c
+
+	column CropID
+		dataType: string
+		lineageTag: fb3d344b-bf1b-4daf-bcc7-75fc736612fe
+		summarizeBy: none
+		sourceColumn: CropID
+
+	column FarmID
+		dataType: string
+		lineageTag: 6be0fe23-323d-48fb-bad9-1bb1daecb999
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column CropName
+		dataType: string
+		lineageTag: b37bb81a-e347-4508-ad71-8c4b407b30c0
+		summarizeBy: none
+		sourceColumn: CropName
+
+	column CropCategory
+		dataType: string
+		lineageTag: 631a129d-a7d6-483d-a311-4f8c3cd268e8
+		summarizeBy: none
+		sourceColumn: CropCategory
+
+	column GrowthStage
+		dataType: string
+		lineageTag: dc8f61e7-f9db-464b-8185-a3514d8f07c9
+		summarizeBy: none
+		sourceColumn: GrowthStage
+
+	column Season
+		dataType: string
+		lineageTag: 74791151-45bd-4283-b15a-22e16592de58
+		summarizeBy: none
+		sourceColumn: Season
+
+	column PlantedAreaHa
+		dataType: double
+		formatString: 0.00
+		lineageTag: 294e4d19-2677-48e4-ba19-4bd0bf0e819e
+		summarizeBy: sum
+		sourceColumn: PlantedAreaHa
+
+	column TargetMarket
+		dataType: string
+		lineageTag: ad2a6016-167e-424f-a755-2ce2bd0fb2ef
+		summarizeBy: none
+		sourceColumn: TargetMarket
+
+	column Status
+		dataType: string
+		lineageTag: 862ce59b-88d9-4173-aa3e-d7147c0f655b
+		summarizeBy: none
+		sourceColumn: Status
+
+	partition Crops-1deddb0b-45e7-5e0e-83bc-32e370e50702 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\Crops.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"CropID", type text}, {"FarmID", type text}, {"CropName", type text}, {"CropCategory", type text}, {"GrowthStage", type text}, {"Season", type text}, {"PlantedAreaHa", type number}, {"TargetMarket", type text}, {"Status", type text}}, "en-US")
+				in
+				    #"Changed Type"
+

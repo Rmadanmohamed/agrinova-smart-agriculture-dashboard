@@ -1,0 +1,11 @@
+TooltipPage,Size,PrimaryMeasure,AttachTo
+TT_CropHealth,320x240,Crop Health Score,Crop health cards and scan visuals
+TT_WaterEfficiency,320x240,Water Efficiency,Moisture and irrigation visuals
+TT_Energy,320x240,Energy Status,Energy and charging visuals
+TT_IoTUptime,320x240,Sensor Uptime,"Sensor, gateway, and packet visuals"
+TT_RobotStatus,320x240,Robot Battery,Robot mission visuals
+TT_DroneCoverage,320x240,Drone Flight Coverage,Drone mission visuals
+TT_BlockchainIntegrity,320x240,Blockchain Integrity,Blockchain block and transaction visuals
+TT_MarketRisk,320x240,Market Risk Score,Market impact and risk visuals
+TT_Profitability,320x240,Profitability Signal,Price and recommendation visuals
+TT_AlertSeverity,320x240,Critical Alerts,Alert matrix and priority visuals

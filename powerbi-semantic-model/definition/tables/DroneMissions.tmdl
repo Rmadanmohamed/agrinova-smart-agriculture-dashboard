@@ -1,0 +1,134 @@
+table DroneMissions
+	lineageTag: ef6e0e97-d1dc-5b3f-b439-09fd06a87828
+
+	column DroneMissionID
+		dataType: string
+		lineageTag: 25fca99b-77c1-4fb0-ac60-f50bd3ac44a2
+		summarizeBy: none
+		sourceColumn: DroneMissionID
+
+	column DroneID
+		dataType: string
+		lineageTag: be7822bd-1628-4bcd-a472-6dd99a927054
+		summarizeBy: none
+		sourceColumn: DroneID
+
+	column FarmID
+		dataType: string
+		lineageTag: 0b5e435e-63e5-44ab-983f-eb7a7ff30340
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column MissionDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 0701fcda-db62-4782-ab74-637d5bc8c9e0
+		summarizeBy: none
+		sourceColumn: MissionDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column MissionState
+		dataType: string
+		lineageTag: 61a4a651-8464-4a0d-a91f-cfa09e6d008c
+		summarizeBy: none
+		sourceColumn: MissionState
+
+	column DroneFlightStatus
+		dataType: string
+		lineageTag: 51839878-7755-457a-a9eb-be0a31b20217
+		summarizeBy: none
+		sourceColumn: DroneFlightStatus
+
+	column BatteryPct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 34a7aeb3-aeb0-4af2-8e8b-82d9ee8e4440
+		summarizeBy: sum
+		sourceColumn: BatteryPct
+
+	column NDVIIndex
+		dataType: double
+		formatString: 0.00
+		lineageTag: 35974cdb-3299-4138-84cb-c53fd91ea5e2
+		summarizeBy: sum
+		sourceColumn: NDVIIndex
+
+	column AerialCropHealthPct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 056461f0-a625-40d3-823f-4fc4c188a8f1
+		summarizeBy: sum
+		sourceColumn: AerialCropHealthPct
+
+	column ThermalStressZones
+		dataType: int64
+		formatString: 0
+		lineageTag: 0eb52ec4-8447-422d-98ee-47c4641f9be8
+		summarizeBy: sum
+		sourceColumn: ThermalStressZones
+
+	column FlightCoveragePct
+		dataType: double
+		formatString: 0.00
+		lineageTag: f47cfeaf-0277-42de-bca4-27e1def19d8d
+		summarizeBy: sum
+		sourceColumn: FlightCoveragePct
+
+	column ImageCaptureStatus
+		dataType: string
+		lineageTag: 5abad3aa-b83b-4cb0-ac60-724c22f7a802
+		summarizeBy: none
+		sourceColumn: ImageCaptureStatus
+
+	column LastAerialScan
+		dataType: string
+		lineageTag: 57725cfd-2554-4216-b8ac-081e81429a49
+		summarizeBy: none
+		sourceColumn: LastAerialScan
+
+	column HighRiskFieldZones
+		dataType: int64
+		formatString: 0
+		lineageTag: 39265909-3fdb-4522-a778-969acb3dca0e
+		summarizeBy: sum
+		sourceColumn: HighRiskFieldZones
+
+	column Status
+		dataType: string
+		lineageTag: f9383563-a45a-47eb-9bf6-93b9a03bc8d5
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 51d793fb-c5c4-441e-a412-c67c007e2372
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: cbfbbe52-6776-4c49-800d-980e8e9f417d
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	column PacketRate
+		dataType: double
+		formatString: 0.00
+		lineageTag: 7a217fc1-53b1-4061-93c0-9bb02e7961c2
+		summarizeBy: sum
+		sourceColumn: PacketRate
+
+	partition DroneMissions-ea497f6c-521f-5352-ac3a-8a478d298bd5 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\DroneMissions.csv"), [Delimiter=",", Columns=18, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"DroneMissionID", type text}, {"DroneID", type text}, {"FarmID", type text}, {"MissionDate", type date}, {"MissionState", type text}, {"DroneFlightStatus", type text}, {"BatteryPct", type number}, {"NDVIIndex", type number}, {"AerialCropHealthPct", type number}, {"ThermalStressZones", Int64.Type}, {"FlightCoveragePct", type number}, {"ImageCaptureStatus", type text}, {"LastAerialScan", type text}, {"HighRiskFieldZones", Int64.Type}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}, {"PacketRate", type number}}, "en-US")
+				in
+				    #"Changed Type"
+

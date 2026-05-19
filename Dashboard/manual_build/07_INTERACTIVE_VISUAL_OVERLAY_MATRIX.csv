@@ -1,0 +1,240 @@
+Page,VisualName,VisualType,X,Y,Width,Height,Fields,Tooltip,InteractionTarget
+AgriNova Overview,Nav_01_Page_AgriNova_Overview,actionButton,20,150,220,44,,Auto,Navigation -> Page_AgriNova_Overview
+AgriNova Overview,Nav_02_Page_Smart_Farm_Monitoring,actionButton,20,212,220,44,,Auto,Navigation -> Page_Smart_Farm_Monitoring
+AgriNova Overview,Nav_03_Page_Crop_Health_Vision_Intelligence,actionButton,20,274,220,44,,Auto,Navigation -> Page_Crop_Health_Vision_Intelligence
+AgriNova Overview,Nav_04_Page_Robotics_Drone_Operations,actionButton,20,336,220,44,,Auto,Navigation -> Page_Robotics_Drone_Operations
+AgriNova Overview,Nav_05_Page_IoT_Sensor_Network,actionButton,20,398,220,44,,Auto,Navigation -> Page_IoT_Sensor_Network
+AgriNova Overview,Nav_06_Page_Price_Prediction,actionButton,20,460,220,44,,Auto,Navigation -> Page_Price_Prediction
+AgriNova Overview,Nav_07_Page_Blockchain_Security,actionButton,20,522,220,44,,Auto,Navigation -> Page_Blockchain_Security
+AgriNova Overview,Nav_08_Page_AI_Assistant,actionButton,20,584,220,44,,Auto,Navigation -> Page_AI_Assistant
+AgriNova Overview,Nav_09_Page_Sustainability_Energy,actionButton,20,646,220,44,,Auto,Navigation -> Page_Sustainability_Energy
+AgriNova Overview,Nav_10_Page_Alerts_Reports,actionButton,20,708,220,44,,Auto,Navigation -> Page_Alerts_Reports
+AgriNova Overview,Overview_AI_Recommendations,tableEx,930,630,960,310,Values: InteractionType; Values: RecommendationText; Values: AssistantAvailability,Auto,
+AgriNova Overview,Overview_Alerts,matrix,280,630,620,310,Rows: AlertType; Columns: PriorityLevel; Values: Alerts,Page_TT_AlertSeverity,Page_DT_AlertDetail
+AgriNova Overview,Overview_Crop_Health_Area,areaChart,830,270,500,330,Category: Scan Date; Y: Crop Health,Page_TT_CropHealth,Page_DT_CropAnalytics
+AgriNova Overview,Overview_Farm_Map,map,280,270,520,330,Latitude: Latitude; Longitude: Longitude; Size: Farms; Category: Status,Auto,Page_DT_FarmProfile
+AgriNova Overview,Overview_KPI_Area,cardVisual,500,130,215,118,Values: Total Area,Auto,Page_DT_FarmProfile
+AgriNova Overview,Overview_KPI_Drones,cardVisual,1160,130,215,118,Values: Drones,Page_TT_DroneCoverage,Page_DT_DroneMission
+AgriNova Overview,Overview_KPI_Farms,cardVisual,280,130,215,118,Values: Total Farms,Page_TT_CropHealth,Page_DT_FarmProfile
+AgriNova Overview,Overview_KPI_Health,cardVisual,1380,130,220,118,Values: System Health,Page_TT_CropHealth,Page_DT_CropAnalytics
+AgriNova Overview,Overview_KPI_Robots,cardVisual,940,130,215,118,Values: Robots,Page_TT_RobotStatus,Page_DT_RobotMission
+AgriNova Overview,Overview_KPI_Sensors,cardVisual,720,130,215,118,Values: Sensors,Page_TT_IoTUptime,Page_DT_SensorDetail
+AgriNova Overview,Overview_Live_Telemetry,tableEx,1360,420,530,180,Values: HeartbeatState; Values: LastSignalTime; Values: Packet Rate,Page_TT_IoTUptime,Page_DT_SensorDetail
+AgriNova Overview,Overview_System_Gauge,gauge,1620,130,270,260,Value: System Health,Page_TT_CropHealth,
+AI Assistant,AI_Chat_Surface,tableEx,280,130,880,810,Values: FarmerQuestion; Values: RecommendationText; Values: AssistantAvailability,Auto,
+AI Assistant,AI_Guidance_Cards,multiRowCard,1190,330,700,300,Values: InteractionType; Values: RecommendationText,Auto,
+AI Assistant,AI_Image_Diagnosis,tableEx,1190,660,700,280,Values: ImageDiagnosisResult; Values: RecommendedTreatment; Values: PreventiveAction,Auto,Page_DT_CropScan
+AI Assistant,AI_Suggested_Questions,slicer,1190,130,700,170,Values: InteractionType,Auto,
+AI Assistant,Nav_01_Page_AgriNova_Overview,actionButton,20,150,220,44,,Auto,Navigation -> Page_AgriNova_Overview
+AI Assistant,Nav_02_Page_Smart_Farm_Monitoring,actionButton,20,212,220,44,,Auto,Navigation -> Page_Smart_Farm_Monitoring
+AI Assistant,Nav_03_Page_Crop_Health_Vision_Intelligence,actionButton,20,274,220,44,,Auto,Navigation -> Page_Crop_Health_Vision_Intelligence
+AI Assistant,Nav_04_Page_Robotics_Drone_Operations,actionButton,20,336,220,44,,Auto,Navigation -> Page_Robotics_Drone_Operations
+AI Assistant,Nav_05_Page_IoT_Sensor_Network,actionButton,20,398,220,44,,Auto,Navigation -> Page_IoT_Sensor_Network
+AI Assistant,Nav_06_Page_Price_Prediction,actionButton,20,460,220,44,,Auto,Navigation -> Page_Price_Prediction
+AI Assistant,Nav_07_Page_Blockchain_Security,actionButton,20,522,220,44,,Auto,Navigation -> Page_Blockchain_Security
+AI Assistant,Nav_08_Page_AI_Assistant,actionButton,20,584,220,44,,Auto,Navigation -> Page_AI_Assistant
+AI Assistant,Nav_09_Page_Sustainability_Energy,actionButton,20,646,220,44,,Auto,Navigation -> Page_Sustainability_Energy
+AI Assistant,Nav_10_Page_Alerts_Reports,actionButton,20,708,220,44,,Auto,Navigation -> Page_Alerts_Reports
+Alerts & Reports,Alerts_Actions_Feed,tableEx,280,550,760,390,Values: AlertMessage; Values: RecommendedAction; Values: ResolutionStatus,Auto,Page_DT_AlertDetail
+Alerts & Reports,Alerts_Command_Center,matrix,280,130,760,390,Rows: AlertType; Columns: PriorityLevel; Values: Alerts,Page_TT_AlertSeverity,Page_DT_AlertDetail
+Alerts & Reports,Alerts_Priority_Breakdown,stackedColumnChart,1070,130,820,390,Category: Priority; Y: Alerts; Series: Alert Type,Page_TT_AlertSeverity,Page_DT_AlertDetail
+Alerts & Reports,Nav_01_Page_AgriNova_Overview,actionButton,20,150,220,44,,Auto,Navigation -> Page_AgriNova_Overview
+Alerts & Reports,Nav_02_Page_Smart_Farm_Monitoring,actionButton,20,212,220,44,,Auto,Navigation -> Page_Smart_Farm_Monitoring
+Alerts & Reports,Nav_03_Page_Crop_Health_Vision_Intelligence,actionButton,20,274,220,44,,Auto,Navigation -> Page_Crop_Health_Vision_Intelligence
+Alerts & Reports,Nav_04_Page_Robotics_Drone_Operations,actionButton,20,336,220,44,,Auto,Navigation -> Page_Robotics_Drone_Operations
+Alerts & Reports,Nav_05_Page_IoT_Sensor_Network,actionButton,20,398,220,44,,Auto,Navigation -> Page_IoT_Sensor_Network
+Alerts & Reports,Nav_06_Page_Price_Prediction,actionButton,20,460,220,44,,Auto,Navigation -> Page_Price_Prediction
+Alerts & Reports,Nav_07_Page_Blockchain_Security,actionButton,20,522,220,44,,Auto,Navigation -> Page_Blockchain_Security
+Alerts & Reports,Nav_08_Page_AI_Assistant,actionButton,20,584,220,44,,Auto,Navigation -> Page_AI_Assistant
+Alerts & Reports,Nav_09_Page_Sustainability_Energy,actionButton,20,646,220,44,,Auto,Navigation -> Page_Sustainability_Energy
+Alerts & Reports,Nav_10_Page_Alerts_Reports,actionButton,20,708,220,44,,Auto,Navigation -> Page_Alerts_Reports
+Alerts & Reports,Reports_Catalog,tableEx,1070,550,820,390,Values: ReportName; Values: GeneratedDate; Values: ExportFormat; Values: DecisionSupportSummary,Auto,
+Blockchain Security,Blockchain_Audit_Panel,matrix,1080,670,810,270,Rows: TraceabilityStage; Columns: DataIntegrityStatus; Values: Transactions,Auto,Page_DT_BlockchainTransaction
+Blockchain Security,Blockchain_Block_History,tableEx,280,300,1610,330,Values: BlockIndex; Values: RecordType; Values: HashPreview; Values: PreviousHashPreview; Values: ValidationState,Page_TT_BlockchainIntegrity,Page_DT_BlockchainTransaction
+Blockchain Security,Blockchain_KPI_Blocks,cardVisual,1360,130,260,130,Values: Total Blocks,Auto,Page_DT_BlockchainTransaction
+Blockchain Security,Blockchain_KPI_Contracts,cardVisual,1090,130,260,130,Values: Smart Contracts,Auto,Page_DT_BlockchainTransaction
+Blockchain Security,Blockchain_KPI_Integrity,cardVisual,280,130,260,130,Values: Validation States,Page_TT_BlockchainIntegrity,Page_DT_BlockchainTransaction
+Blockchain Security,Blockchain_KPI_Network,cardVisual,1630,130,260,130,Values: Network Health,Auto,Page_DT_BlockchainTransaction
+Blockchain Security,Blockchain_KPI_Records,cardVisual,550,130,260,130,Values: Verified Records,Auto,Page_DT_BlockchainTransaction
+Blockchain Security,Blockchain_KPI_Secure,cardVisual,820,130,260,130,Values: Secure Transactions,Auto,Page_DT_BlockchainTransaction
+Blockchain Security,Blockchain_Validation_Timeline,areaChart,280,670,770,270,Category: Transaction Date; Y: Transactions,Auto,Page_DT_BlockchainTransaction
+Blockchain Security,Nav_01_Page_AgriNova_Overview,actionButton,20,150,220,44,,Auto,Navigation -> Page_AgriNova_Overview
+Blockchain Security,Nav_02_Page_Smart_Farm_Monitoring,actionButton,20,212,220,44,,Auto,Navigation -> Page_Smart_Farm_Monitoring
+Blockchain Security,Nav_03_Page_Crop_Health_Vision_Intelligence,actionButton,20,274,220,44,,Auto,Navigation -> Page_Crop_Health_Vision_Intelligence
+Blockchain Security,Nav_04_Page_Robotics_Drone_Operations,actionButton,20,336,220,44,,Auto,Navigation -> Page_Robotics_Drone_Operations
+Blockchain Security,Nav_05_Page_IoT_Sensor_Network,actionButton,20,398,220,44,,Auto,Navigation -> Page_IoT_Sensor_Network
+Blockchain Security,Nav_06_Page_Price_Prediction,actionButton,20,460,220,44,,Auto,Navigation -> Page_Price_Prediction
+Blockchain Security,Nav_07_Page_Blockchain_Security,actionButton,20,522,220,44,,Auto,Navigation -> Page_Blockchain_Security
+Blockchain Security,Nav_08_Page_AI_Assistant,actionButton,20,584,220,44,,Auto,Navigation -> Page_AI_Assistant
+Blockchain Security,Nav_09_Page_Sustainability_Energy,actionButton,20,646,220,44,,Auto,Navigation -> Page_Sustainability_Energy
+Blockchain Security,Nav_10_Page_Alerts_Reports,actionButton,20,708,220,44,,Auto,Navigation -> Page_Alerts_Reports
+Crop Health & Vision Intelligence,Nav_01_Page_AgriNova_Overview,actionButton,20,150,220,44,,Auto,Navigation -> Page_AgriNova_Overview
+Crop Health & Vision Intelligence,Nav_02_Page_Smart_Farm_Monitoring,actionButton,20,212,220,44,,Auto,Navigation -> Page_Smart_Farm_Monitoring
+Crop Health & Vision Intelligence,Nav_03_Page_Crop_Health_Vision_Intelligence,actionButton,20,274,220,44,,Auto,Navigation -> Page_Crop_Health_Vision_Intelligence
+Crop Health & Vision Intelligence,Nav_04_Page_Robotics_Drone_Operations,actionButton,20,336,220,44,,Auto,Navigation -> Page_Robotics_Drone_Operations
+Crop Health & Vision Intelligence,Nav_05_Page_IoT_Sensor_Network,actionButton,20,398,220,44,,Auto,Navigation -> Page_IoT_Sensor_Network
+Crop Health & Vision Intelligence,Nav_06_Page_Price_Prediction,actionButton,20,460,220,44,,Auto,Navigation -> Page_Price_Prediction
+Crop Health & Vision Intelligence,Nav_07_Page_Blockchain_Security,actionButton,20,522,220,44,,Auto,Navigation -> Page_Blockchain_Security
+Crop Health & Vision Intelligence,Nav_08_Page_AI_Assistant,actionButton,20,584,220,44,,Auto,Navigation -> Page_AI_Assistant
+Crop Health & Vision Intelligence,Nav_09_Page_Sustainability_Energy,actionButton,20,646,220,44,,Auto,Navigation -> Page_Sustainability_Energy
+Crop Health & Vision Intelligence,Nav_10_Page_Alerts_Reports,actionButton,20,708,220,44,,Auto,Navigation -> Page_Alerts_Reports
+Crop Health & Vision Intelligence,Vision_Diagnosis_Actions,multiRowCard,280,620,1610,320,Values: ImageDiagnosisResult; Values: RecommendedTreatment; Values: PreventiveAction,Auto,Page_DT_CropScan
+Crop Health & Vision Intelligence,Vision_Disease_Distribution,stackedBarChart,280,300,520,290,Category: Crop; Y: Scans; Series: Disease,Page_TT_CropHealth,Page_DT_CropAnalytics
+Crop Health & Vision Intelligence,Vision_KPI_Diseases,cardVisual,540,130,250,140,Values: Detected Diseases,Page_TT_CropHealth,Page_DT_CropScan
+Crop Health & Vision Intelligence,Vision_KPI_Health,cardVisual,280,130,250,140,Values: Health Score,Page_TT_CropHealth,Page_DT_CropScan
+Crop Health & Vision Intelligence,Vision_KPI_Risk,cardVisual,1060,130,250,140,Values: Risk Levels,Auto,Page_DT_CropScan
+Crop Health & Vision Intelligence,Vision_KPI_Scans,cardVisual,800,130,250,140,Values: Images Analyzed,Auto,Page_DT_CropScan
+Crop Health & Vision Intelligence,Vision_KPI_Stress,cardVisual,1320,130,250,140,Values: Stress Signals,Auto,Page_DT_CropScan
+Crop Health & Vision Intelligence,Vision_KPI_Treatment,cardVisual,1580,130,310,140,Values: Treatments,Auto,Page_DT_CropScan
+Crop Health & Vision Intelligence,Vision_Scan_History,tableEx,830,300,1060,290,Values: ScanID; Values: ScanDate; Values: Health; Values: DetectedDisease; Values: PestRiskLevel,Auto,Page_DT_CropScan
+DT_AlertDetail,Visual_Back_Navigation_01,actionButton,280,24,160,48,,,
+DT_AlertDetail,Visual_Detail_Matrix_03,pivotTable,280,140,780,800,,,
+DT_AlertDetail,Visual_Drillthrough_Header_02,card,460,24,1430,86,,,
+DT_AlertDetail,Visual_Trend_And_Evidence_Panel_04,lineChart,1090,140,800,800,,,
+DT_BlockchainTransaction,Visual_Back_Navigation_01,actionButton,280,24,160,48,,,
+DT_BlockchainTransaction,Visual_Detail_Matrix_03,pivotTable,280,140,780,800,,,
+DT_BlockchainTransaction,Visual_Drillthrough_Header_02,card,460,24,1430,86,,,
+DT_BlockchainTransaction,Visual_Trend_And_Evidence_Panel_04,lineChart,1090,140,800,800,,,
+DT_CropAnalytics,Visual_Back_Navigation_01,actionButton,280,24,160,48,,,
+DT_CropAnalytics,Visual_Detail_Matrix_03,pivotTable,280,140,780,800,,,
+DT_CropAnalytics,Visual_Drillthrough_Header_02,card,460,24,1430,86,,,
+DT_CropAnalytics,Visual_Trend_And_Evidence_Panel_04,lineChart,1090,140,800,800,,,
+DT_CropScan,Visual_Back_Navigation_01,actionButton,280,24,160,48,,,
+DT_CropScan,Visual_Detail_Matrix_03,pivotTable,280,140,780,800,,,
+DT_CropScan,Visual_Drillthrough_Header_02,card,460,24,1430,86,,,
+DT_CropScan,Visual_Trend_And_Evidence_Panel_04,lineChart,1090,140,800,800,,,
+DT_DroneMission,Visual_Back_Navigation_01,actionButton,280,24,160,48,,,
+DT_DroneMission,Visual_Detail_Matrix_03,pivotTable,280,140,780,800,,,
+DT_DroneMission,Visual_Drillthrough_Header_02,card,460,24,1430,86,,,
+DT_DroneMission,Visual_Trend_And_Evidence_Panel_04,lineChart,1090,140,800,800,,,
+DT_FarmProfile,Visual_Back_Navigation_01,actionButton,280,24,160,48,,,
+DT_FarmProfile,Visual_Detail_Matrix_03,pivotTable,280,140,780,800,,,
+DT_FarmProfile,Visual_Drillthrough_Header_02,card,460,24,1430,86,,,
+DT_FarmProfile,Visual_Trend_And_Evidence_Panel_04,lineChart,1090,140,800,800,,,
+DT_PriceCommodity,Visual_Back_Navigation_01,actionButton,280,24,160,48,,,
+DT_PriceCommodity,Visual_Detail_Matrix_03,pivotTable,280,140,780,800,,,
+DT_PriceCommodity,Visual_Drillthrough_Header_02,card,460,24,1430,86,,,
+DT_PriceCommodity,Visual_Trend_And_Evidence_Panel_04,lineChart,1090,140,800,800,,,
+DT_RobotMission,Visual_Back_Navigation_01,actionButton,280,24,160,48,,,
+DT_RobotMission,Visual_Detail_Matrix_03,pivotTable,280,140,780,800,,,
+DT_RobotMission,Visual_Drillthrough_Header_02,card,460,24,1430,86,,,
+DT_RobotMission,Visual_Trend_And_Evidence_Panel_04,lineChart,1090,140,800,800,,,
+DT_SensorDetail,Visual_Back_Navigation_01,actionButton,280,24,160,48,,,
+DT_SensorDetail,Visual_Detail_Matrix_03,pivotTable,280,140,780,800,,,
+DT_SensorDetail,Visual_Drillthrough_Header_02,card,460,24,1430,86,,,
+DT_SensorDetail,Visual_Trend_And_Evidence_Panel_04,lineChart,1090,140,800,800,,,
+IoT Sensor Network,IOT_Communication_Heatmap,matrix,950,290,940,360,Rows: FarmName; Columns: SensorType; Values: Communication,Page_TT_IoTUptime,Page_DT_SensorDetail
+IoT Sensor Network,IOT_Gateway_Tree,decompositionTreeVisual,280,290,640,360,Analyze: Communication; ExplainBy: Farm; ExplainBy: Gateway; ExplainBy: Type,Page_TT_IoTUptime,Page_DT_SensorDetail
+IoT Sensor Network,IOT_KPI_Gateways,cardVisual,1060,130,250,130,Values: Gateways,Auto,Page_DT_SensorDetail
+IoT Sensor Network,IOT_KPI_Live,cardVisual,1320,130,250,130,Values: Heartbeat States,Auto,Page_DT_SensorDetail
+IoT Sensor Network,IOT_KPI_Online,cardVisual,540,130,250,130,Values: Communication,Page_TT_IoTUptime,Page_DT_SensorDetail
+IoT Sensor Network,IOT_KPI_Packets,cardVisual,800,130,250,130,Values: Data Packets,Auto,Page_DT_SensorDetail
+IoT Sensor Network,IOT_KPI_Total,cardVisual,280,130,250,130,Values: Total Sensors,Page_TT_IoTUptime,Page_DT_SensorDetail
+IoT Sensor Network,IOT_KPI_Types,cardVisual,1580,130,310,130,Values: Sensor Types,Auto,Page_DT_SensorDetail
+IoT Sensor Network,IOT_Packet_Rate_Trend,areaChart,280,680,1610,260,Category: Last Signal; Y: Packet Rate,Auto,Page_DT_SensorDetail
+IoT Sensor Network,Nav_01_Page_AgriNova_Overview,actionButton,20,150,220,44,,Auto,Navigation -> Page_AgriNova_Overview
+IoT Sensor Network,Nav_02_Page_Smart_Farm_Monitoring,actionButton,20,212,220,44,,Auto,Navigation -> Page_Smart_Farm_Monitoring
+IoT Sensor Network,Nav_03_Page_Crop_Health_Vision_Intelligence,actionButton,20,274,220,44,,Auto,Navigation -> Page_Crop_Health_Vision_Intelligence
+IoT Sensor Network,Nav_04_Page_Robotics_Drone_Operations,actionButton,20,336,220,44,,Auto,Navigation -> Page_Robotics_Drone_Operations
+IoT Sensor Network,Nav_05_Page_IoT_Sensor_Network,actionButton,20,398,220,44,,Auto,Navigation -> Page_IoT_Sensor_Network
+IoT Sensor Network,Nav_06_Page_Price_Prediction,actionButton,20,460,220,44,,Auto,Navigation -> Page_Price_Prediction
+IoT Sensor Network,Nav_07_Page_Blockchain_Security,actionButton,20,522,220,44,,Auto,Navigation -> Page_Blockchain_Security
+IoT Sensor Network,Nav_08_Page_AI_Assistant,actionButton,20,584,220,44,,Auto,Navigation -> Page_AI_Assistant
+IoT Sensor Network,Nav_09_Page_Sustainability_Energy,actionButton,20,646,220,44,,Auto,Navigation -> Page_Sustainability_Energy
+IoT Sensor Network,Nav_10_Page_Alerts_Reports,actionButton,20,708,220,44,,Auto,Navigation -> Page_Alerts_Reports
+Price Prediction,Nav_01_Page_AgriNova_Overview,actionButton,20,150,220,44,,Auto,Navigation -> Page_AgriNova_Overview
+Price Prediction,Nav_02_Page_Smart_Farm_Monitoring,actionButton,20,212,220,44,,Auto,Navigation -> Page_Smart_Farm_Monitoring
+Price Prediction,Nav_03_Page_Crop_Health_Vision_Intelligence,actionButton,20,274,220,44,,Auto,Navigation -> Page_Crop_Health_Vision_Intelligence
+Price Prediction,Nav_04_Page_Robotics_Drone_Operations,actionButton,20,336,220,44,,Auto,Navigation -> Page_Robotics_Drone_Operations
+Price Prediction,Nav_05_Page_IoT_Sensor_Network,actionButton,20,398,220,44,,Auto,Navigation -> Page_IoT_Sensor_Network
+Price Prediction,Nav_06_Page_Price_Prediction,actionButton,20,460,220,44,,Auto,Navigation -> Page_Price_Prediction
+Price Prediction,Nav_07_Page_Blockchain_Security,actionButton,20,522,220,44,,Auto,Navigation -> Page_Blockchain_Security
+Price Prediction,Nav_08_Page_AI_Assistant,actionButton,20,584,220,44,,Auto,Navigation -> Page_AI_Assistant
+Price Prediction,Nav_09_Page_Sustainability_Energy,actionButton,20,646,220,44,,Auto,Navigation -> Page_Sustainability_Energy
+Price Prediction,Nav_10_Page_Alerts_Reports,actionButton,20,708,220,44,,Auto,Navigation -> Page_Alerts_Reports
+Price Prediction,Price_Commodity_Matrix,matrix,280,720,1610,220,Rows: CropName; Values: Current; Values: 60-Day; Values: ExpectedTrend; Values: VolatilityLevel; Values: SmartRecommendation,Auto,Page_DT_PriceCommodity
+Price Prediction,Price_Commodity_Slicer,slicer,280,130,300,160,Values: CropName,Auto,
+Price Prediction,Price_Impact_Factors,clusteredBarChart,1240,330,650,360,Category: Commodity; Y: Supply Demand; Y: USD/EGP; Y: Inflation; Y: Seasonal,Auto,Page_DT_PriceCommodity
+Price Prediction,Price_KPI_Current,cardVisual,610,130,250,160,Values: Current Price,Auto,Page_DT_PriceCommodity
+Price Prediction,Price_KPI_Predicted,cardVisual,870,130,250,160,Values: Predicted 60 Days,Auto,Page_DT_PriceCommodity
+Price Prediction,Price_KPI_Profit,cardVisual,1650,130,240,160,Values: Profitability,Page_TT_Profitability,Page_DT_PriceCommodity
+Price Prediction,Price_KPI_Risk,cardVisual,1390,130,250,160,Values: Market Risk,Page_TT_MarketRisk,Page_DT_PriceCommodity
+Price Prediction,Price_KPI_Trend,cardVisual,1130,130,250,160,Values: Trend Signals,Auto,Page_DT_PriceCommodity
+Price Prediction,Price_Trajectory,areaChart,280,330,930,360,Category: Date; Y: Current Price; Y: Predicted Price,Auto,Page_DT_PriceCommodity
+Robotics & Drone Operations,Nav_01_Page_AgriNova_Overview,actionButton,20,150,220,44,,Auto,Navigation -> Page_AgriNova_Overview
+Robotics & Drone Operations,Nav_02_Page_Smart_Farm_Monitoring,actionButton,20,212,220,44,,Auto,Navigation -> Page_Smart_Farm_Monitoring
+Robotics & Drone Operations,Nav_03_Page_Crop_Health_Vision_Intelligence,actionButton,20,274,220,44,,Auto,Navigation -> Page_Crop_Health_Vision_Intelligence
+Robotics & Drone Operations,Nav_04_Page_Robotics_Drone_Operations,actionButton,20,336,220,44,,Auto,Navigation -> Page_Robotics_Drone_Operations
+Robotics & Drone Operations,Nav_05_Page_IoT_Sensor_Network,actionButton,20,398,220,44,,Auto,Navigation -> Page_IoT_Sensor_Network
+Robotics & Drone Operations,Nav_06_Page_Price_Prediction,actionButton,20,460,220,44,,Auto,Navigation -> Page_Price_Prediction
+Robotics & Drone Operations,Nav_07_Page_Blockchain_Security,actionButton,20,522,220,44,,Auto,Navigation -> Page_Blockchain_Security
+Robotics & Drone Operations,Nav_08_Page_AI_Assistant,actionButton,20,584,220,44,,Auto,Navigation -> Page_AI_Assistant
+Robotics & Drone Operations,Nav_09_Page_Sustainability_Energy,actionButton,20,646,220,44,,Auto,Navigation -> Page_Sustainability_Energy
+Robotics & Drone Operations,Nav_10_Page_Alerts_Reports,actionButton,20,708,220,44,,Auto,Navigation -> Page_Alerts_Reports
+Robotics & Drone Operations,Robotics_Drone_Cards,multiRowCard,1100,130,380,260,Values: Drone Battery; Values: Flight Coverage; Values: Aerial Health,Page_TT_DroneCoverage,Page_DT_DroneMission
+Robotics & Drone Operations,Robotics_Drone_Missions,tableEx,1100,420,790,310,Values: DroneID; Values: MissionState; Values: Thermal Zones; Values: HighRiskFieldZones,Auto,Page_DT_DroneMission
+Robotics & Drone Operations,Robotics_Drone_Status,donutChart,1500,130,390,260,Category: Flight Status; Y: Flights,Page_TT_DroneCoverage,Page_DT_DroneMission
+Robotics & Drone Operations,Robotics_Performance_Trend,lineChart,280,760,1610,180,Category: Mission Date; Y: Robot Battery; Y: Robot Coverage,Auto,Page_DT_RobotMission
+Robotics & Drone Operations,Robotics_Robot_Cards,multiRowCard,280,130,380,260,Values: Robot Battery; Values: Route Progress; Values: Field Coverage,Page_TT_RobotStatus,Page_DT_RobotMission
+Robotics & Drone Operations,Robotics_Robot_Missions,tableEx,280,420,790,310,Values: RobotID; Values: MissionState; Values: Obstacle Alerts; Values: LastMissionSummary,Auto,Page_DT_RobotMission
+Robotics & Drone Operations,Robotics_Robot_Status,donutChart,680,130,390,260,Category: Robot Status; Y: Missions,Page_TT_RobotStatus,Page_DT_RobotMission
+Smart Farm Monitoring,Farm_KPI_Humidity,cardVisual,1100,130,185,170,Values: Humidity,Auto,Page_DT_SensorDetail
+Smart Farm Monitoring,Farm_KPI_Light,cardVisual,1670,130,220,170,Values: Light,Auto,Page_DT_SensorDetail
+Smart Farm Monitoring,Farm_KPI_Moisture,cardVisual,720,130,185,170,Values: Soil Moisture,Page_TT_WaterEfficiency,Page_DT_SensorDetail
+Smart Farm Monitoring,Farm_KPI_Nitrogen,cardVisual,1480,130,185,170,Values: Nitrogen,Auto,Page_DT_SensorDetail
+Smart Farm Monitoring,Farm_KPI_pH,cardVisual,1290,130,185,170,Values: pH,Auto,Page_DT_SensorDetail
+Smart Farm Monitoring,Farm_KPI_Temp,cardVisual,910,130,185,170,Values: Soil Temp,Auto,Page_DT_SensorDetail
+Smart Farm Monitoring,Farm_Latest_Readings,tableEx,280,690,1610,250,Values: SensorID; Values: Status; Values: Zone; Values: LastSignalTime; Values: Communication,Page_TT_IoTUptime,Page_DT_SensorDetail
+Smart Farm Monitoring,Farm_Moisture_Trends,lineChart,280,330,760,330,Category: Date; Y: Soil Moisture; Y: pH,Page_TT_WaterEfficiency,Page_DT_SensorDetail
+Smart Farm Monitoring,Farm_Slicer_Crop,slicer,475,130,190,130,Values: CropName,Auto,
+Smart Farm Monitoring,Farm_Slicer_Farm,slicer,280,130,190,130,Values: FarmName,Auto,
+Smart Farm Monitoring,Farm_Zone_Heatmap,matrix,1070,330,820,330,Rows: Zone; Columns: SensorType; Values: Communication,Page_TT_IoTUptime,Page_DT_SensorDetail
+Smart Farm Monitoring,Nav_01_Page_AgriNova_Overview,actionButton,20,150,220,44,,Auto,Navigation -> Page_AgriNova_Overview
+Smart Farm Monitoring,Nav_02_Page_Smart_Farm_Monitoring,actionButton,20,212,220,44,,Auto,Navigation -> Page_Smart_Farm_Monitoring
+Smart Farm Monitoring,Nav_03_Page_Crop_Health_Vision_Intelligence,actionButton,20,274,220,44,,Auto,Navigation -> Page_Crop_Health_Vision_Intelligence
+Smart Farm Monitoring,Nav_04_Page_Robotics_Drone_Operations,actionButton,20,336,220,44,,Auto,Navigation -> Page_Robotics_Drone_Operations
+Smart Farm Monitoring,Nav_05_Page_IoT_Sensor_Network,actionButton,20,398,220,44,,Auto,Navigation -> Page_IoT_Sensor_Network
+Smart Farm Monitoring,Nav_06_Page_Price_Prediction,actionButton,20,460,220,44,,Auto,Navigation -> Page_Price_Prediction
+Smart Farm Monitoring,Nav_07_Page_Blockchain_Security,actionButton,20,522,220,44,,Auto,Navigation -> Page_Blockchain_Security
+Smart Farm Monitoring,Nav_08_Page_AI_Assistant,actionButton,20,584,220,44,,Auto,Navigation -> Page_AI_Assistant
+Smart Farm Monitoring,Nav_09_Page_Sustainability_Energy,actionButton,20,646,220,44,,Auto,Navigation -> Page_Sustainability_Energy
+Smart Farm Monitoring,Nav_10_Page_Alerts_Reports,actionButton,20,708,220,44,,Auto,Navigation -> Page_Alerts_Reports
+Sustainability & Energy,Energy_Carbon_Reduction,clusteredBarChart,280,690,1610,250,Category: Farm; Y: Carbon Reduction,Auto,
+Sustainability & Energy,Energy_Charging_Status,matrix,1160,300,730,360,Rows: FarmName; Columns: RobotChargingStatus; Values: Battery,Auto,
+Sustainability & Energy,Energy_KPI_Carbon,cardVisual,820,130,260,140,Values: Carbon Reduction,Auto,
+Sustainability & Energy,Energy_KPI_Charging,cardVisual,1630,130,260,140,Values: Charging States,Auto,
+Sustainability & Energy,Energy_KPI_Consumption,cardVisual,1090,130,260,140,Values: Energy Use,Auto,
+Sustainability & Energy,Energy_KPI_Offgrid,cardVisual,1360,130,260,140,Values: Off-grid Status,Auto,
+Sustainability & Energy,Energy_KPI_Renewable,cardVisual,550,130,260,140,Values: Renewable Energy,Page_TT_Energy,
+Sustainability & Energy,Energy_KPI_Status,cardVisual,280,130,260,140,Values: Battery Level,Page_TT_Energy,
+Sustainability & Energy,Energy_Trend,areaChart,280,300,850,360,Category: Date; Y: Renewable; Y: Consumption,Page_TT_Energy,
+Sustainability & Energy,Nav_01_Page_AgriNova_Overview,actionButton,20,150,220,44,,Auto,Navigation -> Page_AgriNova_Overview
+Sustainability & Energy,Nav_02_Page_Smart_Farm_Monitoring,actionButton,20,212,220,44,,Auto,Navigation -> Page_Smart_Farm_Monitoring
+Sustainability & Energy,Nav_03_Page_Crop_Health_Vision_Intelligence,actionButton,20,274,220,44,,Auto,Navigation -> Page_Crop_Health_Vision_Intelligence
+Sustainability & Energy,Nav_04_Page_Robotics_Drone_Operations,actionButton,20,336,220,44,,Auto,Navigation -> Page_Robotics_Drone_Operations
+Sustainability & Energy,Nav_05_Page_IoT_Sensor_Network,actionButton,20,398,220,44,,Auto,Navigation -> Page_IoT_Sensor_Network
+Sustainability & Energy,Nav_06_Page_Price_Prediction,actionButton,20,460,220,44,,Auto,Navigation -> Page_Price_Prediction
+Sustainability & Energy,Nav_07_Page_Blockchain_Security,actionButton,20,522,220,44,,Auto,Navigation -> Page_Blockchain_Security
+Sustainability & Energy,Nav_08_Page_AI_Assistant,actionButton,20,584,220,44,,Auto,Navigation -> Page_AI_Assistant
+Sustainability & Energy,Nav_09_Page_Sustainability_Energy,actionButton,20,646,220,44,,Auto,Navigation -> Page_Sustainability_Energy
+Sustainability & Energy,Nav_10_Page_Alerts_Reports,actionButton,20,708,220,44,,Auto,Navigation -> Page_Alerts_Reports
+TT_AlertSeverity,Visual_Tooltip_Context_02,tableEx,16,106,288,118,,,
+TT_AlertSeverity,Visual_Tooltip_KPI_Card_01,card,16,14,288,82,,,
+TT_BlockchainIntegrity,Visual_Tooltip_Context_02,tableEx,16,106,288,118,,,
+TT_BlockchainIntegrity,Visual_Tooltip_KPI_Card_01,card,16,14,288,82,,,
+TT_CropHealth,Visual_Tooltip_Context_02,tableEx,16,106,288,118,,,
+TT_CropHealth,Visual_Tooltip_KPI_Card_01,card,16,14,288,82,,,
+TT_DroneCoverage,Visual_Tooltip_Context_02,tableEx,16,106,288,118,,,
+TT_DroneCoverage,Visual_Tooltip_KPI_Card_01,card,16,14,288,82,,,
+TT_Energy,Visual_Tooltip_Context_02,tableEx,16,106,288,118,,,
+TT_Energy,Visual_Tooltip_KPI_Card_01,card,16,14,288,82,,,
+TT_IoTUptime,Visual_Tooltip_Context_02,tableEx,16,106,288,118,,,
+TT_IoTUptime,Visual_Tooltip_KPI_Card_01,card,16,14,288,82,,,
+TT_MarketRisk,Visual_Tooltip_Context_02,tableEx,16,106,288,118,,,
+TT_MarketRisk,Visual_Tooltip_KPI_Card_01,card,16,14,288,82,,,
+TT_Profitability,Visual_Tooltip_Context_02,tableEx,16,106,288,118,,,
+TT_Profitability,Visual_Tooltip_KPI_Card_01,card,16,14,288,82,,,
+TT_RobotStatus,Visual_Tooltip_Context_02,tableEx,16,106,288,118,,,
+TT_RobotStatus,Visual_Tooltip_KPI_Card_01,card,16,14,288,82,,,
+TT_WaterEfficiency,Visual_Tooltip_Context_02,tableEx,16,106,288,118,,,
+TT_WaterEfficiency,Visual_Tooltip_KPI_Card_01,card,16,14,288,82,,,

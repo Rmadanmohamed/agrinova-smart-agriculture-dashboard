@@ -1,0 +1,13 @@
+RobotMissionID,RobotID,FarmID,MissionDate,MissionState,RobotStatus,BatteryPct,RouteProgressPct,SoilScanningProgressPct,FieldCoveragePct,ObstacleAlerts,LastMissionSummary,Status,LastSignalTime,HeartbeatState,PacketRate
+RM110518,AGR-R01-1,F001,2026-05-17,Active,Mapping,89.7,64.0,62.0,69.6,5,Soil scan completed for priority rows,Online,2026-05-18T18:35,Live,12.4
+RM120518,AGR-R01-2,F001,2026-05-14,Active,Scanning,83.9,53.5,44.8,54.9,4,Camera sweep completed across greenhouse lane,Online,2026-05-18T19:07,Live,21.5
+RM210518,AGR-R02-1,F002,2026-05-07,Active,Patrol,100,71.9,89.1,79.4,1,Camera sweep completed across greenhouse lane,Attention,2026-05-18T18:34,Live,27.1
+RM220518,AGR-R02-2,F002,2026-05-06,Active,Scanning,71.8,56.7,65.9,53.3,3,Nutrient variance detected in Zone B,Online,2026-05-18T18:38,Live,21.7
+RM310518,AGR-R03-1,F003,2026-05-17,Active,Mapping,66.7,56.5,89.6,73.3,4,Nutrient variance detected in Zone B,Online,2026-05-18T18:19,Live,19.7
+RM320518,AGR-R03-2,F003,2026-05-12,Active,Patrol,76.5,69.1,78.5,66.4,5,Nutrient variance detected in Zone B,Online,2026-05-18T18:52,Live,16.1
+RM410518,AGR-R04-1,F004,2026-05-18,Active,Scanning,64.9,48.1,100,34.2,0,Soil scan completed for priority rows,Online,2026-05-18T18:54,Live,20.6
+RM420518,AGR-R04-2,F004,2026-05-16,Charging,Charging,80.8,70.5,69.0,47.8,2,Soil scan completed for priority rows,Online,2026-05-18T18:48,Live,19.2
+RM510518,AGR-R05-1,F005,2026-05-18,Active,Patrol,46.5,100,78.9,69.3,4,Moisture stress route assigned,Online,2026-05-18T18:54,Live,20.4
+RM520518,AGR-R05-2,F005,2026-05-10,Standby,Standby,84.9,57.7,97.3,49.6,3,Camera sweep completed across greenhouse lane,Online,2026-05-18T18:58,Live,15.4
+RM610518,AGR-R06-1,F006,2026-05-07,Charging,Charging,67.3,47.9,73.5,83.5,5,Camera sweep completed across greenhouse lane,Online,2026-05-18T18:52,Live,23.6
+RM620518,AGR-R06-2,F006,2026-05-12,Charging,Charging,86.2,64.6,71.7,69.3,3,Camera sweep completed across greenhouse lane,Standby,2026-05-18T18:28,Live,29.7

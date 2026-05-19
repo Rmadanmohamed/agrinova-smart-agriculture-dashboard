@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="140" viewBox="0 0 520 140" role="img" aria-label="AgriNova logo">
+  <defs>
+    <linearGradient id="word" x1="0" x2="1"><stop offset="0" stop-color="#F4FBFF"/><stop offset="1" stop-color="#3DF27A"/></linearGradient>
+    <radialGradient id="leafGlow"><stop offset="0" stop-color="#3DF27A" stop-opacity=".6"/><stop offset="1" stop-color="#020B18" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="520" height="140" fill="none"/>
+  <circle cx="65" cy="70" r="58" fill="url(#leafGlow)"/>
+  <g fill="#3DF27A">
+    <path d="M63 77C36 74 24 57 24 35c24 2 38 16 39 42z"/>
+    <path d="M72 67c4-28 22-40 45-39-4 24-20 38-45 39z"/>
+    <path d="M68 88c-20 8-38 3-49-14 19-8 36-2 49 14z"/>
+    <path d="M78 88c20 8 38 3 49-14-19-8-36-2-49 14z"/>
+  </g>
+  <text x="150" y="73" font-family="Segoe UI Semibold, Arial" font-size="44" fill="url(#word)">AgriNova</text>
+  <text x="153" y="104" font-family="Segoe UI, Arial" font-size="20" fill="#9EB6C9">AI Smart Agriculture Platform</text>
+</svg>

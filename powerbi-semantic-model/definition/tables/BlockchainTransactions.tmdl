@@ -1,0 +1,137 @@
+table BlockchainTransactions
+	lineageTag: b05a1122-fbfa-5692-9914-e92415009a34
+
+	column TransactionID
+		dataType: string
+		lineageTag: 6b657ca9-496e-413a-936b-bf86fd3aee6d
+		summarizeBy: none
+		sourceColumn: TransactionID
+
+	column BlockIndex
+		dataType: int64
+		formatString: 0
+		lineageTag: b50c156a-79a9-41bb-ac0d-e9d97cb6384d
+		summarizeBy: sum
+		sourceColumn: BlockIndex
+
+	column FarmID
+		dataType: string
+		lineageTag: 50de7699-9c6d-4b72-aff5-fa9a0342c29a
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column TransactionDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: dac65aa0-faf5-431d-9e75-8a3427a3f1ab
+		summarizeBy: none
+		sourceColumn: TransactionDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecordType
+		dataType: string
+		lineageTag: df8b2f2e-554b-4451-8921-0dfe33d850da
+		summarizeBy: none
+		sourceColumn: RecordType
+
+	column BlockchainNetworkStatus
+		dataType: string
+		lineageTag: f0e69b01-83ba-490e-b979-498d591b8a9a
+		summarizeBy: none
+		sourceColumn: BlockchainNetworkStatus
+
+	column VerifiedFarmRecords
+		dataType: int64
+		formatString: 0
+		lineageTag: f315573c-7747-450c-aa4e-2d1c5fa51c11
+		summarizeBy: sum
+		sourceColumn: VerifiedFarmRecords
+
+	column SecureTransactions
+		dataType: int64
+		formatString: 0
+		lineageTag: 03f56e2f-bb28-4d93-950d-97205cdb60ec
+		summarizeBy: sum
+		sourceColumn: SecureTransactions
+
+	column SmartContractStatus
+		dataType: string
+		lineageTag: d5440e40-587f-4d39-ba30-a65ce15da959
+		summarizeBy: none
+		sourceColumn: SmartContractStatus
+
+	column DataIntegrityStatus
+		dataType: string
+		lineageTag: 942b4400-1ce3-4a2a-99b7-dcd4166c877f
+		summarizeBy: none
+		sourceColumn: DataIntegrityStatus
+
+	column HashPreview
+		dataType: string
+		lineageTag: b8ac937f-2c4d-44a9-b877-67269648c753
+		summarizeBy: none
+		sourceColumn: HashPreview
+
+	column PreviousHashPreview
+		dataType: string
+		lineageTag: 8959c260-21f1-4c5a-83d0-fe3bca6c3d87
+		summarizeBy: none
+		sourceColumn: PreviousHashPreview
+
+	column ValidationState
+		dataType: string
+		lineageTag: faad09bb-c5e6-4a66-85e2-8bb989cfba8a
+		summarizeBy: none
+		sourceColumn: ValidationState
+
+	column TraceabilityStage
+		dataType: string
+		lineageTag: 3d8c25c5-5ffa-4a1f-a32c-166f3f38f151
+		summarizeBy: none
+		sourceColumn: TraceabilityStage
+
+	column TimelineStep
+		dataType: string
+		lineageTag: 27c70121-d3a7-4ff6-bd72-5ee3ad50abf3
+		summarizeBy: none
+		sourceColumn: TimelineStep
+
+	column Status
+		dataType: string
+		lineageTag: 7ad6ea96-7f17-4d35-81dd-eb46f0cc4675
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 2f6d7dee-8808-4bcb-b2b8-b2b9f7a80cd2
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: 2b2cb69d-e581-494b-bd4a-7e05cd62ff82
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	column PacketRate
+		dataType: double
+		formatString: 0.00
+		lineageTag: 73c5342d-fb52-409d-aa74-cd2c95f587db
+		summarizeBy: sum
+		sourceColumn: PacketRate
+
+	partition BlockchainTransactions-b0b2fd17-54ca-5986-9044-be9160ec4987 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\BlockchainTransactions.csv"), [Delimiter=",", Columns=19, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"TransactionID", type text}, {"BlockIndex", Int64.Type}, {"FarmID", type text}, {"TransactionDate", type date}, {"RecordType", type text}, {"BlockchainNetworkStatus", type text}, {"VerifiedFarmRecords", Int64.Type}, {"SecureTransactions", Int64.Type}, {"SmartContractStatus", type text}, {"DataIntegrityStatus", type text}, {"HashPreview", type text}, {"PreviousHashPreview", type text}, {"ValidationState", type text}, {"TraceabilityStage", type text}, {"TimelineStep", type text}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}, {"PacketRate", type number}}, "en-US")
+				in
+				    #"Changed Type"
+

@@ -1,0 +1,241 @@
+table AgriNova_Measures
+	isHidden
+	lineageTag: 9f37c81a-d679-565a-a49f-b66fdcc0bc27
+
+	measure 'Total Monitored Farms' = DISTINCTCOUNT ( Farms[FarmID] )
+		formatString: #,##0
+		lineageTag: dbabb059-8921-550b-afe0-cd38cb983ea2
+
+	measure 'Active IoT Sensors' = CALCULATE ( DISTINCTCOUNT ( Sensors[SensorID] ), Sensors[Status] = "Online" )
+		formatString: #,##0
+		lineageTag: 234f4e09-593d-5f43-9440-6b616dfe2902
+
+	measure 'Active Robots' = CALCULATE ( DISTINCTCOUNT ( RobotMissions[RobotID] ), RobotMissions[MissionState] = "Active" )
+		formatString: #,##0
+		lineageTag: 8500e414-1622-569e-be20-7d35db19602d
+
+	measure 'Active Drones' = CALCULATE ( DISTINCTCOUNT ( DroneMissions[DroneID] ), DroneMissions[MissionState] = "Active" )
+		formatString: #,##0
+		lineageTag: 5e536c92-6b02-51b8-83cc-82b88b939021
+
+	measure 'Crop Health Score' = AVERAGE ( CropHealthScans[CropHealthScore] )
+		formatString: 0.0
+		lineageTag: 806a4481-4e9a-59d1-bca6-726c339ec9b1
+
+	measure 'Water Efficiency' =
+			VAR moisture = AVERAGE ( SoilReadings[SoilMoisturePct] )
+			VAR stableRange = IF ( moisture >= 38 && moisture <= 68, 1, 0.82 )
+			RETURN ROUND ( stableRange * 100, 1 )
+		formatString: 0.0
+		lineageTag: b1d58333-9cab-52b4-92f7-5c79a6dac9a6
+
+	measure 'Energy Status' = AVERAGE ( EnergyUsage[BatteryLevelPct] )
+		formatString: 0.0
+		lineageTag: 80811fc6-bca6-573c-a94a-a135fdc6ef50
+
+	measure 'Blockchain Integrity' =
+			DIVIDE (
+			    CALCULATE ( COUNTROWS ( BlockchainTransactions ), BlockchainTransactions[ValidationState] = "Verified" ),
+			    COUNTROWS ( BlockchainTransactions )
+			) * 100
+		formatString: 0.0
+		lineageTag: c78b75e4-8edf-5772-957a-f86665336689
+
+	measure 'AI Assistant Availability' =
+			DIVIDE (
+			    CALCULATE ( COUNTROWS ( AIRecommendations ), AIRecommendations[AssistantAvailability] = "Available" ),
+			    COUNTROWS ( AIRecommendations )
+			) * 100
+		formatString: 0.0
+		lineageTag: 90673d4a-876c-5baf-a659-ddb0e5548984
+
+	measure 'Open Alerts' = CALCULATE ( COUNTROWS ( Alerts ), Alerts[ResolutionStatus] <> "Resolved" )
+		formatString: #,##0
+		lineageTag: 93ecd2ea-6e84-564f-a102-f91f1dcd6a9c
+
+	measure 'Critical Alerts' = CALCULATE ( COUNTROWS ( Alerts ), Alerts[PriorityLevel] = "Critical" )
+		formatString: #,##0
+		lineageTag: ecbf4959-e4a4-541f-9ab6-72cd8afcc114
+
+	measure 'Average Soil Moisture' = AVERAGE ( SoilReadings[SoilMoisturePct] )
+		formatString: #,##0
+		lineageTag: 130a7f9a-e0aa-5e06-bd81-80917563ffb1
+
+	measure 'Average Soil Temperature' = AVERAGE ( SoilReadings[SoilTempC] )
+		formatString: #,##0
+		lineageTag: 31ce3752-1c1b-528c-b633-954a70864341
+
+	measure 'Average Humidity' = AVERAGE ( SoilReadings[HumidityPct] )
+		formatString: #,##0
+		lineageTag: 10f5ea92-7ec4-555c-941b-78f700bcaa6a
+
+	measure 'Average pH' = AVERAGE ( SoilReadings[PH] )
+		formatString: #,##0
+		lineageTag: 5d7989a1-a9d9-53c5-9f9e-bc022999efca
+
+	measure 'Average Nitrogen' = AVERAGE ( SoilReadings[NitrogenPPM] )
+		formatString: #,##0
+		lineageTag: 22ef8c4a-8c22-5f94-8049-faaa0e2f707b
+
+	measure 'Average Phosphorus' = AVERAGE ( SoilReadings[PhosphorusPPM] )
+		formatString: #,##0
+		lineageTag: 9d8f305b-a786-5263-bccc-664450c397df
+
+	measure 'Average Potassium' = AVERAGE ( SoilReadings[PotassiumPPM] )
+		formatString: #,##0
+		lineageTag: d7537c65-8e17-5fb3-8e99-0f44fc2d20b8
+
+	measure 'Average Light Intensity' = AVERAGE ( SoilReadings[LightLux] )
+		formatString: #,##0
+		lineageTag: 03d1cacc-97a9-5cff-9dcc-7d8d06c6a427
+
+	measure 'Average CO2' = AVERAGE ( SoilReadings[CO2PPM] )
+		formatString: #,##0
+		lineageTag: 53a75954-83ea-5dea-aa42-c816ad866485
+
+	measure 'Average Leaf Wetness' = AVERAGE ( SoilReadings[LeafWetnessPct] )
+		formatString: #,##0
+		lineageTag: 82a5fbb0-8bf1-59da-be44-7435c4c99df4
+
+	measure 'Sensor Uptime' = AVERAGE ( Sensors[CommunicationHealth] )
+		formatString: 0.0
+		lineageTag: d9543959-ccee-52ce-bdba-f977ef90b817
+
+	measure 'Data Packets Received' = SUM ( Sensors[PacketRate] )
+		formatString: #,##0
+		lineageTag: 9005eeaf-cd30-5966-861b-411ed7c1dd39
+
+	measure 'Robot Battery' = AVERAGE ( RobotMissions[BatteryPct] )
+		formatString: 0.0
+		lineageTag: 0750516f-dc17-57ae-b912-3dbe94aca9ec
+
+	measure 'Robot Route Progress' = AVERAGE ( RobotMissions[RouteProgressPct] )
+		formatString: #,##0
+		lineageTag: ce6a7320-6b27-5c4c-bddb-84becce061cf
+
+	measure 'Robot Field Coverage' = AVERAGE ( RobotMissions[FieldCoveragePct] )
+		formatString: 0.0
+		lineageTag: f1c839e8-2a35-52b9-93b4-2677b3398b26
+
+	measure 'Drone Battery' = AVERAGE ( DroneMissions[BatteryPct] )
+		formatString: 0.0
+		lineageTag: b172333e-b01e-5ace-8ea5-fcf713081b0a
+
+	measure 'Drone Flight Coverage' = AVERAGE ( DroneMissions[FlightCoveragePct] )
+		formatString: 0.0
+		lineageTag: f1198561-9b02-5a69-823a-45f27872e72b
+
+	measure 'Aerial Crop Health' = AVERAGE ( DroneMissions[AerialCropHealthPct] )
+		formatString: #,##0
+		lineageTag: c64ac754-775d-573b-b3de-1a9527c860be
+
+	measure 'Thermal Stress Zones' = SUM ( DroneMissions[ThermalStressZones] )
+		formatString: #,##0
+		lineageTag: 3f2b41af-cdee-5866-b396-c88f9fea1808
+
+	measure 'Current Market Price' = AVERAGE ( PricePredictions[CurrentMarketPriceEGP] )
+		formatString: #,##0.00
+		lineageTag: 926f90f3-da1a-54a7-8375-e22305e7fb7a
+
+	measure 'Predicted Price After 60 Days' =
+			CALCULATE (
+			    AVERAGE ( PricePredictions[PredictedPrice60DaysEGP] ),
+			    PricePredictions[HorizonDays] = 60
+			)
+		formatString: #,##0.00
+		lineageTag: 70d6987d-bd60-599e-beae-503498332f27
+
+	measure 'Expected Price Change' = [Predicted Price After 60 Days] - [Current Market Price]
+		formatString: #,##0.00
+		lineageTag: 923386b6-6c2d-5c14-b033-98d18e176dd2
+
+	measure 'Expected Price Change %' = DIVIDE ( [Expected Price Change], [Current Market Price] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: dadc1278-d706-5304-b1be-d97d9589e3ce
+
+	measure 'Market Risk Score' =
+			VAR highRisk = CALCULATE ( COUNTROWS ( PricePredictions ), PricePredictions[MarketRisk] = "High" )
+			VAR totalRows = COUNTROWS ( PricePredictions )
+			RETURN DIVIDE ( highRisk, totalRows ) * 100
+		formatString: 0.0
+		lineageTag: 2262134a-87ea-5aab-9991-aeea4ed7d575
+
+	measure 'Profitability Signal' =
+			DIVIDE (
+			    CALCULATE ( COUNTROWS ( PricePredictions ), PricePredictions[ProfitabilityIndicator] = "Attractive" ),
+			    COUNTROWS ( PricePredictions )
+			) * 100
+		formatString: #,##0
+		lineageTag: e11da9e5-c7e6-5dcc-a67f-42aa3df88da1
+
+	measure 'Verified Farm Records' = SUM ( BlockchainTransactions[VerifiedFarmRecords] )
+		formatString: #,##0
+		lineageTag: bf420b91-649c-517f-9188-3707381335f0
+
+	measure 'Secure Transactions' = SUM ( BlockchainTransactions[SecureTransactions] )
+		formatString: #,##0
+		lineageTag: 3dc021a1-f7e8-57f8-b3e2-c22befbaca48
+
+	measure 'Renewable Energy Usage' = AVERAGE ( EnergyUsage[RenewableEnergyUsagePct] )
+		formatString: 0.0
+		lineageTag: 16b5ecf8-b2c9-53ff-b1ea-95587aceed62
+
+	measure 'Carbon Reduction' = SUM ( EnergyUsage[CarbonReductionKg] )
+		formatString: #,##0.00
+		lineageTag: 10277370-6f68-5fb6-8031-885f636f368a
+
+	measure 'Energy Consumption' = SUM ( EnergyUsage[EnergyConsumptionKwh] )
+		formatString: #,##0.00
+		lineageTag: a854ca79-bf59-512c-ba2b-faa1f4d4edd8
+
+	measure 'Report Count' = COUNTROWS ( Reports )
+		formatString: #,##0
+		lineageTag: fb269c4b-3815-5a0d-8bd2-8fa64c08f604
+
+	measure 'Live System Signals' =
+			CALCULATE ( COUNTROWS ( Sensors ), Sensors[HeartbeatState] = "Live" )
+			    + CALCULATE ( COUNTROWS ( RobotMissions ), RobotMissions[HeartbeatState] = "Live" )
+			    + CALCULATE ( COUNTROWS ( DroneMissions ), DroneMissions[HeartbeatState] = "Live" )
+			    + CALCULATE ( COUNTROWS ( BlockchainTransactions ), BlockchainTransactions[HeartbeatState] = "Live" )
+		formatString: #,##0
+		lineageTag: 60432314-4045-58e9-af55-7c21cec5cd1d
+
+	measure 'System Health Index' =
+			ROUND (
+			    DIVIDE (
+			        [Crop Health Score] + [Water Efficiency] + [Sensor Uptime] + [Blockchain Integrity] + [AI Assistant Availability],
+			        5
+			    ),
+			    1
+			)
+		formatString: #,##0
+		lineageTag: a46f4b94-fe28-5e30-9e0c-8c27c1b84461
+
+	measure 'KPI Status Label' =
+			VAR valueToCheck = [System Health Index]
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        valueToCheck >= 85, "Excellent",
+			        valueToCheck >= 72, "Stable",
+			        valueToCheck >= 60, "Watch",
+			        "Critical"
+			    )
+		formatString: 0.0
+		lineageTag: 62d33b02-2046-54e6-911e-84096d3b2ea7
+
+	column MeasureAnchor
+		dataType: string
+		isHidden
+		lineageTag: f8cba26c-6acb-4b6b-86a3-da5069932b49
+		summarizeBy: none
+		sourceColumn: MeasureAnchor
+
+	partition AgriNova_Measures = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [MeasureAnchor = text], {{"AgriNova"}})
+				in
+				    Source
+

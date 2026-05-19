@@ -1,0 +1,96 @@
+table WeatherReadings
+	lineageTag: 4a81db49-14d5-5095-984e-89b07af1e78e
+
+	column WeatherID
+		dataType: string
+		lineageTag: d81068bc-e907-4639-a08b-f68033041276
+		summarizeBy: none
+		sourceColumn: WeatherID
+
+	column FarmID
+		dataType: string
+		lineageTag: 038bb03b-d7a8-4eb5-a945-245aabf10163
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 36ab7974-585f-4d2d-9361-0854d963aa4f
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column TemperatureC
+		dataType: double
+		formatString: 0.00
+		lineageTag: 6b698c8c-c13e-44d0-b424-38335bfc555c
+		summarizeBy: sum
+		sourceColumn: TemperatureC
+
+	column HumidityPct
+		dataType: double
+		formatString: 0.00
+		lineageTag: 26b08582-d17b-4a62-8684-f3107ab06799
+		summarizeBy: sum
+		sourceColumn: HumidityPct
+
+	column WindSpeedKph
+		dataType: double
+		formatString: 0.00
+		lineageTag: 80c5f956-ce0f-4b3b-b7cd-0fba6e783430
+		summarizeBy: sum
+		sourceColumn: WindSpeedKph
+
+	column RainfallMm
+		dataType: double
+		formatString: 0.00
+		lineageTag: 72dea33f-b0cc-4c68-885e-fe1181de673a
+		summarizeBy: sum
+		sourceColumn: RainfallMm
+
+	column SolarRadiationWm2
+		dataType: double
+		formatString: 0.00
+		lineageTag: f62e4793-81c4-4f23-977a-8c692f1ef838
+		summarizeBy: sum
+		sourceColumn: SolarRadiationWm2
+
+	column WeatherRisk
+		dataType: string
+		lineageTag: 60116068-5e77-490d-ae0f-7270ad725d04
+		summarizeBy: none
+		sourceColumn: WeatherRisk
+
+	column Status
+		dataType: string
+		lineageTag: 18c8950d-a30f-4cda-b661-4d9e52803ca2
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 50a6b7ac-1fac-4cbe-8e96-0da50abd0e1f
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: ecd6a1b4-1567-462d-8352-29fe375f11f5
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	partition WeatherReadings-340a1c82-0fac-5487-8c03-082a95493b6b = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\WeatherReadings.csv"), [Delimiter=",", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"WeatherID", type text}, {"FarmID", type text}, {"Date", type date}, {"TemperatureC", type number}, {"HumidityPct", type number}, {"WindSpeedKph", type number}, {"RainfallMm", type number}, {"SolarRadiationWm2", type number}, {"WeatherRisk", type text}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}}, "en-US")
+				in
+				    #"Changed Type"
+

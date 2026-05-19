@@ -1,0 +1,212 @@
+{
+  "jsonValid": true,
+  "tableCount": 16,
+  "csvTables": [
+    {
+      "table": "Farms",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "Crops",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "Sensors",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "SoilReadings",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "WeatherReadings",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "RobotMissions",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "DroneMissions",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "CropHealthScans",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "PricePredictions",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "BlockchainTransactions",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "AIRecommendations",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "Alerts",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "EnergyUsage",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "Reports",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "Date",
+      "directCsv": true,
+      "selfReference": false,
+      "deps": []
+    }
+  ],
+  "cycles": [],
+  "cycleCount": 0,
+  "queryDeps": [
+    {
+      "table": "Farms",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "Crops",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "Sensors",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "SoilReadings",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "WeatherReadings",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "RobotMissions",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "DroneMissions",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "CropHealthScans",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "PricePredictions",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "BlockchainTransactions",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "AIRecommendations",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "Alerts",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "EnergyUsage",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "Reports",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "Date",
+      "csvTable": true,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    },
+    {
+      "table": "AgriNova_Measures",
+      "csvTable": false,
+      "sourceType": "m",
+      "selfReference": false,
+      "deps": []
+    }
+  ]
+}

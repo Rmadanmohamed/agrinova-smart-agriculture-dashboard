@@ -1,0 +1,95 @@
+table Farms
+	lineageTag: e2043094-c022-545e-b6ff-3298f283ee0e
+
+	column FarmID
+		dataType: string
+		lineageTag: cc2474b7-2c73-4dc4-abaf-3748c2103027
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column FarmName
+		dataType: string
+		lineageTag: f7535118-ed84-49b5-8e55-107b544e22f9
+		summarizeBy: none
+		sourceColumn: FarmName
+
+	column Governorate
+		dataType: string
+		lineageTag: e14655fa-bf8f-45f5-a31a-cc8993fbfa7d
+		summarizeBy: none
+		sourceColumn: Governorate
+
+	column Region
+		dataType: string
+		lineageTag: cf2bf862-99d3-481e-9403-018084f607e0
+		summarizeBy: none
+		sourceColumn: Region
+
+	column AreaHa
+		dataType: int64
+		formatString: 0
+		lineageTag: 6039dce6-b81f-4083-ba58-af409773a5a5
+		summarizeBy: sum
+		sourceColumn: AreaHa
+
+	column Latitude
+		dataType: double
+		formatString: 0.00
+		lineageTag: 1cafeb09-1e66-41d0-97e3-291e4b8338cd
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+	column Longitude
+		dataType: double
+		formatString: 0.00
+		lineageTag: 4f22cd10-0ce2-4b8c-b290-07e042ada5cd
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+	column FarmManager
+		dataType: string
+		lineageTag: a052f763-0ddb-4a72-b219-7f6bbaacc660
+		summarizeBy: none
+		sourceColumn: FarmManager
+
+	column IrrigationType
+		dataType: string
+		lineageTag: 1c9b899d-cf0f-4a4a-bc22-e21d253afac2
+		summarizeBy: none
+		sourceColumn: IrrigationType
+
+	column EnergyMode
+		dataType: string
+		lineageTag: e74677b5-d48c-4ffd-9c02-ae6cebd777dd
+		summarizeBy: none
+		sourceColumn: EnergyMode
+
+	column Status
+		dataType: string
+		lineageTag: 000d3fcb-19ce-4f93-bb68-45e60169d91b
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 96793875-64c6-4ae2-9aca-ed3e6eea9c8c
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: aa936bd0-e9ee-4283-af8e-84d0e99e1842
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	partition Farms-7df51c0f-1a7a-55e4-af5e-a6111b7f94c7 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\Farms.csv"), [Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"FarmID", type text}, {"FarmName", type text}, {"Governorate", type text}, {"Region", type text}, {"AreaHa", Int64.Type}, {"Latitude", type number}, {"Longitude", type number}, {"FarmManager", type text}, {"IrrigationType", type text}, {"EnergyMode", type text}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}}, "en-US")
+				in
+				    #"Changed Type"
+

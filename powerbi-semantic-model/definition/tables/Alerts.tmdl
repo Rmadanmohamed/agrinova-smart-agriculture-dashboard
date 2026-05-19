@@ -1,0 +1,85 @@
+table Alerts
+	lineageTag: 083d13db-4d88-5f6f-a75d-b31367ef599c
+
+	column AlertID
+		dataType: string
+		lineageTag: bfccfc2f-7818-4042-8208-8a0bd169951c
+		summarizeBy: none
+		sourceColumn: AlertID
+
+	column FarmID
+		dataType: string
+		lineageTag: 0d23f29f-450e-4ac8-a7bc-ae49e9a2e232
+		summarizeBy: none
+		sourceColumn: FarmID
+
+	column AlertDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 4cc098c1-ebc2-4407-9329-de1e7f14f1b6
+		summarizeBy: none
+		sourceColumn: AlertDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertType
+		dataType: string
+		lineageTag: 506e84bf-90a7-4722-86fe-67213d0fb098
+		summarizeBy: none
+		sourceColumn: AlertType
+
+	column PriorityLevel
+		dataType: string
+		lineageTag: 33b2a7df-1060-458c-a833-767449668c76
+		summarizeBy: none
+		sourceColumn: PriorityLevel
+
+	column AlertMessage
+		dataType: string
+		lineageTag: 838d959c-735a-4658-8be1-487c813b7231
+		summarizeBy: none
+		sourceColumn: AlertMessage
+
+	column RecommendedAction
+		dataType: string
+		lineageTag: 00fae186-9a98-4ebc-bf15-b155ff1abba4
+		summarizeBy: none
+		sourceColumn: RecommendedAction
+
+	column ResolutionStatus
+		dataType: string
+		lineageTag: 9de0b89f-cd4d-4d64-ba6f-57b3bf77d203
+		summarizeBy: none
+		sourceColumn: ResolutionStatus
+
+	column Status
+		dataType: string
+		lineageTag: a2c32c00-6610-45b7-a79d-ac1e21d595a7
+		summarizeBy: none
+		sourceColumn: Status
+
+	column LastSignalTime
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: e0d5c3cc-8065-428e-a41a-50aee59013c0
+		summarizeBy: sum
+		sourceColumn: LastSignalTime
+
+	column HeartbeatState
+		dataType: string
+		lineageTag: 57ad3d84-fb51-4f0d-9d5e-8f3c10b71611
+		summarizeBy: none
+		sourceColumn: HeartbeatState
+
+	partition Alerts-c2910f42-9c35-5b2c-944a-226c4b690fc9 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\NMU\level 4\SEMESTER 2\graduation project\Dashboard\data\Alerts.csv"), [Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"AlertID", type text}, {"FarmID", type text}, {"AlertDate", type date}, {"AlertType", type text}, {"PriorityLevel", type text}, {"AlertMessage", type text}, {"RecommendedAction", type text}, {"ResolutionStatus", type text}, {"Status", type text}, {"LastSignalTime", type datetime}, {"HeartbeatState", type text}}, "en-US")
+				in
+				    #"Changed Type"
+

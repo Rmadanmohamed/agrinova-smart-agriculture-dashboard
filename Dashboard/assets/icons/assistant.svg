@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="AI Assistant">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.36"/>
+      <stop offset="100%" stop-color="#020B18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="96" height="96" rx="22" fill="#071524"/>
+  <rect x="1" y="1" width="94" height="94" rx="21" fill="url(#g)" stroke="#8B5CF6" stroke-opacity="0.42"/>
+  <g fill="none" stroke="#8B5CF6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <rect x="22" y="26" width="52" height="38" rx="12"/><path d="M36 64l-10 10v-18"/><circle cx="40" cy="45" r="3"/><circle cx="56" cy="45" r="3"/><path d="M39 56h18"/><path d="M48 26v-8"/>
+  </g>
+</svg>
