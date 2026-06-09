@@ -3,6 +3,10 @@
 ## Overview
 A full smart-agriculture dashboard workspace combining a Next.js dashboard, API routes, Power BI assets, and Power BI-ready CSV data.
 
+Live demo: https://agri-nova-ai-dashboard.vercel.app
+
+Main portfolio: https://ramadan-ai-portfolio.vercel.app
+
 ## Problem Statement
 Agriculture operations need a single dashboard for farm monitoring, crop health, IoT sensors, drone missions, price prediction, alerts, reports, and sustainability signals.
 
@@ -112,7 +116,21 @@ This is an application/dashboard project; no ML benchmark metric was detected.
 - `npm run dev`
 
 ## Screenshots / Demo
-Screenshots or demo media can be added after deployment.
+Live demo: https://agri-nova-ai-dashboard.vercel.app
+
+If the demo is unavailable, run the dashboard locally with the commands above and check the Vercel deployment configuration.
+
+## Deployment
+Recommended platform: Vercel.
+
+Reason: this is a Next.js dashboard with API routes and static CSV-backed demo data.
+
+Before deployment:
+
+- Run `npm install`
+- Run `npm run build`
+- Confirm the public demo loads
+- Confirm dashboard pages and API routes return data
 
 ## Future Improvements
 - Connect live farm data APIs
@@ -121,3 +139,7 @@ Screenshots or demo media can be added after deployment.
 
 ## Author
 Ramadan Mohamed Hassan
+
+- GitHub: https://github.com/Rmadanmohamed
+- LinkedIn: https://www.linkedin.com/in/ramadan-mohamed-657686365
+- Portfolio: https://ramadan-ai-portfolio.vercel.app
