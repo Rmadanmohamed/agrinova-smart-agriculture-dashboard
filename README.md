@@ -1,145 +1,79 @@
 # AgriNova Smart Agriculture Dashboard
 
 ## Overview
-A full smart-agriculture dashboard workspace combining a Next.js dashboard, API routes, Power BI assets, and Power BI-ready CSV data.
 
-Live demo: https://agri-nova-ai-dashboard.vercel.app
+A smart-agriculture dashboard workspace combining a Next.js dashboard, API routes, Power BI assets, and Power BI-ready CSV data.
 
-Main portfolio: https://ramadan-ai-portfolio.vercel.app
+- Live demo: https://agri-nova-ai-dashboard.vercel.app
+- Main portfolio: https://ramadan-ai-portfolio.vercel.app
 
 ## Problem Statement
-Agriculture operations need a single dashboard for farm monitoring, crop health, IoT sensors, drone missions, price prediction, alerts, reports, and sustainability signals.
 
-## Features
+Agriculture operations benefit from a unified view of farm monitoring, crop health, sensor readings, drone and robot missions, price-related data, alerts, reports, and sustainability indicators.
+
+## Implemented in This Repository
+
 - Next.js dashboard pages and API routes
-- Power BI enterprise build kit
-- Agriculture demo datasets
-- IoT, drone, crop, energy, price, and alert modules
+- Power BI dashboard assets and build documentation
+- Agriculture demonstration datasets stored as CSV files
+- Dashboard modules for farm monitoring, crop health, IoT network, robotics and drones, price prediction, alerts, and sustainability
+- Dashboard calculations and demonstration recommendation logic
 
-## Tech Stack
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Recharts
+**Data and integration status:** The repository includes local demonstration CSV data. Its current documentation does not establish live farm-sensor connectivity, live UAV/robot control, or a production-connected blockchain workflow. Dashboard modules should therefore be understood as application/demo components unless a specific integration is independently verified.
+
+## Technology
+
+- Next.js, React, TypeScript
+- Tailwind CSS, Recharts
 - Power BI
-- CSV datasets
+- CSV-based demonstration data
 
-## Dataset
-- AgriNova demo CSV tables in data/ and Dashboard/data/
+## Data
 
-## Models / Algorithms
-- Dashboard calculations and simulated AI recommendation logic
+The repository includes demonstration tables such as Sensors.csv, SoilReadings.csv, CropHealthScans.csv, DroneMissions.csv, RobotMissions.csv, BlockchainTransactions.csv, and PricePredictions.csv. Their presence alone does not establish live device telemetry.
 
-## Results
-This is an application/dashboard project; no ML benchmark metric was detected.
+## Models and Evaluation
+
+This repository is primarily a dashboard/application project. The documented recommendation logic is dashboard-side demonstration logic. No independently reproducible ML benchmark or model-inference metric is claimed here.
 
 ## Project Structure
-- .gitignore
-- app/
-  - ai-assistant/
-  - alerts-reports/
-  - api/
-  - blockchain/
-  - crop-health/
-  - farm-monitoring/
-  - globals.css
-  - iot-network/
-  - layout.tsx
-  - page.tsx
-  - price-prediction/
-  - robotics-drones/
-  - sustainability/
-- components/
-  - dashboard/
-  - theme-provider.tsx
-  - ui/
-- components.json
-- Dashboard/
-  - assets/
-  - dax/
-  - docs/
-  - manual_build/
-  - powerbi/
-  - README.md
-  - theme/
-  - tools/
-  - web/
-- data/
-  - AIRecommendations.csv
-  - Alerts.csv
-  - BlockchainTransactions.csv
-  - CropHealthScans.csv
-  - Crops.csv
-  - Date.csv
-  - DroneMissions.csv
-  - EnergyUsage.csv
-  - Farms.csv
-  - PricePredictions.csv
-  - Reports.csv
-  - RobotMissions.csv
-  - Sensors.csv
-  - SoilReadings.csv
-  - WeatherReadings.csv
-- docs/
-  - powerbi_validation_screenshot_focused_after_schema_fix.png
-- hooks/
-  - use-mobile.ts
-  - use-toast.ts
-- lib/
-  - utils.ts
-- next-env.d.ts
-- next.config.mjs
-- package-lock.json
-- package.json
-- pnpm-lock.yaml
-- pnpm-workspace.yaml
-- postcss.config.mjs
-- powerbi-semantic-model/
-  - definition/
-- public/
-  - apple-icon.png
-  - icon-dark-32x32.png
-  - icon-light-32x32.png
-  - icon.svg
-  - placeholder-logo.png
-  - placeholder-logo.svg
-  - placeholder-user.jpg
-  - placeholder.jpg
-  - placeholder.svg
-- styles/
-  - globals.css
-- tsconfig.json
 
-## How to Run
-- `npm install`
-- `npm run dev`
+- app/ — dashboard pages and API routes
+- components/ — dashboard and UI components
+- Dashboard/ — Power BI assets, DAX, documentation, and build materials
+- data/ — demonstration CSV tables
+- powerbi-semantic-model/ — semantic model definition
+- public/ — static assets
 
-## Screenshots / Demo
-Live demo: https://agri-nova-ai-dashboard.vercel.app
+## Run Locally
 
-If the demo is unavailable, run the dashboard locally with the commands above and check the Vercel deployment configuration.
+    npm install
+    npm run dev
+
+Before deployment, validate the production build and confirm the required dashboard routes and API endpoints.
+
+## Research & Publication
+
+This repository is associated with the broader AgriNova smart-agriculture research project. The peer-reviewed publication is:
+
+**Attiya, I., Badr, M., Bedeir, A., Mohamed, R., Mohamed, N., Saad, M., Tharwat, M., & Abdelgawad, N. (2026).** *An edge-cloud AI-robotics framework with blockchain-based validation for crop yield prediction and plant health monitoring.* **Internet of Things, 39**, Article 102025.  
+[DOI](https://doi.org/10.1016/j.iot.2026.102025) · [Publisher page](https://www.sciencedirect.com/science/article/pii/S2542660526001551)
+
+The publisher's CRediT statement credits Ramadan Mohamed with **Writing – original draft, Visualization, Validation, and Data curation**. This is a co-authored work; no sole-authorship claim is made. The publication describes the research framework and should not be interpreted as proof that every research component is implemented or connected in this dashboard repository.
 
 ## Deployment
-Recommended platform: Vercel.
 
-Reason: this is a Next.js dashboard with API routes and static CSV-backed demo data.
+The project is structured as a Next.js application and identifies Vercel as its recommended deployment platform. Confirm the public demo and run a production build before treating a deployment as operational.
 
-Before deployment:
+## Known Limitations
 
-- Run `npm install`
-- Run `npm run build`
-- Confirm the public demo loads
-- Confirm dashboard pages and API routes return data
-
-## Future Improvements
-- Connect live farm data APIs
-- Add authentication and role-based access
-- Deploy dashboard and publish Power BI documentation
+- Local CSV demonstration data is included.
+- Live sensor/device integrations are not established by this repository's current documentation.
+- No independently verified model benchmark is claimed.
+- Live farm data APIs and authentication are future improvements.
 
 ## Author
-Ramadan Mohamed Hassan
 
-- GitHub: https://github.com/Rmadanmohamed
-- LinkedIn: https://www.linkedin.com/in/ramadan-mohamed-657686365
-- Portfolio: https://ramadan-ai-portfolio.vercel.app
+Ramadan Mohamed Hassan  
+GitHub: https://github.com/Rmadanmohamed  
+Portfolio: https://ramadan-ai-portfolio.vercel.app
