@@ -1,5 +1,8 @@
 # AgriNova Power BI Report Artifacts
 
+
+> **Phase 2 portability repair:** From the repository root, run `python Dashboard/tools/rebind_powerbi_paths.py --data-dir data --output-dir portable-model`. This validates each referenced CSV and writes fresh TMDL copies under the two tracked definition paths, preserving the original model and binary artifacts. Choose an unused output directory. Import or copy the appropriate definitions into a complete local Power BI project; the tracked project is split/incomplete and Power BI Desktop refresh is not verified. Run `python -m unittest discover -s tests -p test_powerbi_paths.py` for synthetic checks.
+
 ## Overview
 
 Power BI report artifacts for the AgriNova demonstration reporting workspace. This directory is part of the [Power BI build kit](../../README.md), not a separate web application.

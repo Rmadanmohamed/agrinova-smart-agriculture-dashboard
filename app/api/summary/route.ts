@@ -1,19 +1,9 @@
 import { NextResponse } from "next/server"
-import fs from "fs"
-import path from "path"
-import { parse } from "csv-parse/sync"
-
-function readCSV(filename: string) {
-  const filePath = path.join(process.cwd(), "data", filename)
-  const content = fs.readFileSync(filePath, "utf-8")
-  return parse(content, { columns: true, skip_empty_lines: true, trim: true })
-}
+import { readCSV } from "@/lib/csv"
 
 export async function GET() {
   try {
     const alerts = readCSV("Alerts.csv")
-    const blockchain = readCSV("BlockchainTransactions.csv")
-    const aiRecs = readCSV("AIRecommendations.csv")
     const energy = readCSV("EnergyUsage.csv")
     const cropHealth = readCSV("CropHealthScans.csv")
     const weather = readCSV("WeatherReadings.csv")
@@ -50,6 +40,7 @@ export async function GET() {
         : "0",
     })
   } catch (e) {
-    return NextResponse.json({ error: String(e) }, { status: 500 })
+    console.error("CSV endpoint failed", e)
+    return NextResponse.json({ error: "Data unavailable" }, { status: 500 })
   }
 }
