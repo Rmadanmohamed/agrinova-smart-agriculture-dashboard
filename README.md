@@ -1,145 +1,102 @@
 # AgriNova Smart Agriculture Dashboard
 
 ## Overview
-A full smart-agriculture dashboard workspace combining a Next.js dashboard, API routes, Power BI assets, and Power BI-ready CSV data.
 
-Live demo: https://agri-nova-ai-dashboard.vercel.app
+A smart-agriculture demonstration workspace for monitoring farms, crop health, IoT sensors, drones and robotics, prices, traceability, recommendations, energy and alerts. It contains three distinct implementations: a Next.js dashboard at the root, a separate React/Express web dashboard, and a Power BI reporting kit. The tracked CSVs are demonstration data, not evidence of live hardware, operational blockchain, or trained-model inference.
 
-Main portfolio: https://ramadan-ai-portfolio.vercel.app
+## Projects
 
-## Problem Statement
-Agriculture operations need a single dashboard for farm monitoring, crop health, IoT sensors, drone missions, price prediction, alerts, reports, and sustainability signals.
+| Project | Location |
+|---|---|
+| Next.js dashboard and API | Repository root |
+| React + Express dashboard | [Dashboard/web](Dashboard/web/README.md) |
+| Power BI build kit | [Dashboard](Dashboard/README.md) |
+| Power BI artifacts | [Dashboard/powerbi/AgriNova](Dashboard/powerbi/AgriNova/README.md) |
 
-## Features
-- Next.js dashboard pages and API routes
-- Power BI enterprise build kit
-- Agriculture demo datasets
-- IoT, drone, crop, energy, price, and alert modules
+## Root application stack
 
-## Tech Stack
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Recharts
-- Power BI
-- CSV datasets
+| Dependency | Manifest | npm lock |
+|---|---|---|
+| Next.js | 16.2.6 | 16.2.6 |
+| React / React DOM | ^19 | 19.2.6 |
+| TypeScript | 5.7.3 | 5.7.3 |
+| Tailwind CSS | ^4.2.0 | 4.3.0 |
+| Recharts | 2.15.0 | 2.15.0 |
+| csv-parse | ^6.2.1 | 6.2.1 |
 
-## Dataset
-- AgriNova demo CSV tables in data/ and Dashboard/data/
+See package.json and package-lock.json for other UI dependencies.
 
-## Models / Algorithms
-- Dashboard calculations and simulated AI recommendation logic
+## Architecture
 
-## Results
-This is an application/dashboard project; no ML benchmark metric was detected.
+```mermaid
+flowchart LR
+    A[CSV fixtures] --> B[Next.js API routes]
+    B --> C[Dashboard pages and charts]
+    A --> D[Separate Express API]
+    D --> E[Vite React frontend]
+    A --> F[Power BI imports]
+```
 
-## Project Structure
-- .gitignore
-- app/
-  - ai-assistant/
-  - alerts-reports/
-  - api/
-  - blockchain/
-  - crop-health/
-  - farm-monitoring/
-  - globals.css
-  - iot-network/
-  - layout.tsx
-  - page.tsx
-  - price-prediction/
-  - robotics-drones/
-  - sustainability/
-- components/
-  - dashboard/
-  - theme-provider.tsx
-  - ui/
-- components.json
-- Dashboard/
-  - assets/
-  - dax/
-  - docs/
-  - manual_build/
-  - powerbi/
-  - README.md
-  - theme/
-  - tools/
-  - web/
-- data/
-  - AIRecommendations.csv
-  - Alerts.csv
-  - BlockchainTransactions.csv
-  - CropHealthScans.csv
-  - Crops.csv
-  - Date.csv
-  - DroneMissions.csv
-  - EnergyUsage.csv
-  - Farms.csv
-  - PricePredictions.csv
-  - Reports.csv
-  - RobotMissions.csv
-  - Sensors.csv
-  - SoilReadings.csv
-  - WeatherReadings.csv
-- docs/
-  - powerbi_validation_screenshot_focused_after_schema_fix.png
-- hooks/
-  - use-mobile.ts
-  - use-toast.ts
-- lib/
-  - utils.ts
-- next-env.d.ts
-- next.config.mjs
-- package-lock.json
-- package.json
-- pnpm-lock.yaml
-- pnpm-workspace.yaml
-- postcss.config.mjs
-- powerbi-semantic-model/
-  - definition/
-- public/
-  - apple-icon.png
-  - icon-dark-32x32.png
-  - icon-light-32x32.png
-  - icon.svg
-  - placeholder-logo.png
-  - placeholder-logo.svg
-  - placeholder-user.jpg
-  - placeholder.jpg
-  - placeholder.svg
-- styles/
-  - globals.css
-- tsconfig.json
+## Prerequisites and setup
 
-## How to Run
-- `npm install`
-- `npm run dev`
+Node.js 20.9+ (Next.js 16 minimum), npm, and the tracked CSV files. No database or GPU is needed.
 
-## Screenshots / Demo
-Live demo: https://agri-nova-ai-dashboard.vercel.app
+```bash
+git clone https://github.com/Rmadanmohamed/agrinova-smart-agriculture-dashboard.git
+cd agrinova-smart-agriculture-dashboard
+npm ci
+npm run dev
+```
 
-If the demo is unavailable, run the dashboard locally with the commands above and check the Vercel deployment configuration.
+Open http://localhost:3000. For a production build:
 
-## Deployment
-Recommended platform: Vercel.
+```bash
+npm run build
+npm start
+```
 
-Reason: this is a Next.js dashboard with API routes and static CSV-backed demo data.
+## Configuration
 
-Before deployment:
+The root API uses process.cwd()/data and does not require custom API keys or environment variables for the reviewed CSV routes. Run from the repository root. The nested web project has separate configuration documented in its README.
 
-- Run `npm install`
-- Run `npm run build`
-- Confirm the public demo loads
-- Confirm dashboard pages and API routes return data
+## Structure and usage
 
-## Future Improvements
-- Connect live farm data APIs
-- Add authentication and role-based access
-- Deploy dashboard and publish Power BI documentation
+- app/ — Next.js pages and GET API handlers.
+- components/dashboard/ and components/ui/ — shared layout and visual components.
+- data/ — fifteen CSV fixtures, including farms, crops, dates, sensors, soil, weather, missions, scans, prices, recommendations, alerts, energy and reports.
+- Dashboard/ — separate web and Power BI implementations.
+- powerbi-semantic-model/ — additional model definitions.
+
+Use the dashboard navigation to switch operational views. The API summary reads and aggregates CSV rows (counts, averages and status fields).
+
+```bash
+curl http://localhost:3000/api/summary
+curl http://localhost:3000/api/farms
+curl http://localhost:3000/api/crop-health
+```
+
+The summary handler returns fields including totalFarms, activeSensors, systemHealthIndex, alerts, avgTemperature and totalEnergy. These are calculations over fixtures rather than model evaluation metrics.
+
+## Visuals and demo
+
+Existing deployment link: [AgriNova dashboard](https://agri-nova-ai-dashboard.vercel.app). Live availability was not independently verified. The following tracked image is a design mockup, not a screenshot of the running root application.
+
+![AgriNova dashboard design reference](Dashboard/manual_build/mockups/01_AgriNova_Overview.png)
+
+## Testing and validation
+
+Run npm run build, start the development server, request the endpoints above, and manually inspect each page. npm run lint is declared but its tooling configuration requires verification. No dedicated automated suite was identified for the root app. The nested web and Power BI historical validation records are linked from their own READMEs. Builds and tests were not executed during this documentation audit.
+
+## Limitations
+
+No live farm integrations, independent ML evaluation, authenticated blockchain network, or production authorization is established by this demonstration. Verify CSV provenance, schema and privacy before operational use. Configure and validate the deployment on Vercel separately.
+
+## License
+
+See [LICENSE](LICENSE).
 
 ## Author
-Ramadan Mohamed Hassan
 
-- GitHub: https://github.com/Rmadanmohamed
-- LinkedIn: https://www.linkedin.com/in/ramadan-mohamed-657686365
-- Portfolio: https://ramadan-ai-portfolio.vercel.app
+Ramadan Mohamed Hassan — AI Engineer | AI Researcher | AI Automation | LLM & RAG Systems | Machine Learning
+
+[Portfolio](https://ramadan-ai-portfolio.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/ramadan-mohamed-89085a366/) · [GitHub](https://github.com/Rmadanmohamed) · [Email](mailto:ramadanmohameddd3@gmail.com)
