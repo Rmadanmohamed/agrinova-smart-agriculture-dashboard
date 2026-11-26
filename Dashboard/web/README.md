@@ -14,7 +14,6 @@ web/
 │   ├── package.json
 │   ├── src/
 │   └── ...
-├── reference-images/
 ├── README.md
 └── VALIDATION_REPORT.md
 ```
@@ -80,6 +79,7 @@ Backend:
 
 ```bash
 cd Dashboard/web/backend
+npm ci
 npm run build
 ```
 
@@ -87,6 +87,7 @@ Frontend:
 
 ```bash
 cd Dashboard/web/frontend
+npm ci
 npm run build
 ```
 
